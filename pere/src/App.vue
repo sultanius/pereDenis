@@ -20,16 +20,19 @@ const test = ref('asdasdasdasd');
 
    <PriceProjects />
 
-   <MainFooter />
+   <MainFooter id="container" />
 
 </template>
 
-<style scoped>
+<style >
 html, body {
     height: 100%; /* Устанавливаем высоту для html и body */
     margin: 0; /* Убираем отступы */
+    scroll-behavior: smooth !important;
 }
-
+html:focus-within {
+    scroll-behavior: smooth;
+}
 .hamburger-lines {
     display: block;
     height: 26px;
