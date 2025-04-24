@@ -6,26 +6,35 @@
 
         <div class="right-top-text"> ru|en </div>
 
-        <div class="right-bottom-text">
-            <div>
-                Архитектура
+        <div class="right-bottom-text" >
+            <div style="font-size: 35px">
+                АРХИТЕКТУРА
             </div>
 
             <div>
-                комфортной жизни
+                КОМФОРТНОЙ ЖИЗНИ
             </div>
         </div>
 
-        <transition name="modal" v-show="isHeaderOpen">
-            <div class="modal" >
-                <div>
-                    <PereDesign />
+        <transition name="modal" v-if="isHeaderOpen">
+            <div class="modal">
+                <div class="modal-container"  >
+                    <div>
+                        <PereDesign  />
 
-                    <p>Greetings, one and all!</p>
-                    <p>Greetings, one and all!</p>
-                    <p>Greetings, one and all!</p>
-                    <p>+7 (921) 443 23 10</p>
-                    <button class="close-button" @click="isHeaderOpen = false">✖</button>
+                        <nav>
+                            <p>ГЛАВНАЯ</p>
+                            <p>ОБО МНЕ</p>
+                            <p>ПРОЕКТЫ</p>
+                            <p>СТОИМОСТЬ</p>
+                            <p>КОНТАКТЫ</p>
+                        </nav>
+                    </div>
+
+                    <div>
+                        <p>+7 (921) 443 23 10</p>
+                        <button class="close-button" @click="isHeaderOpen = false">✖</button>
+                    </div>
                 </div>
             </div>
         </transition>
@@ -54,6 +63,13 @@ export default {
 </script>
 
 <style scoped>
+nav {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 100px;
+}
 .container {
     height: 100vh; /* Высота контейнера равна полному экрану */
     width: 100vw; /* Ширина контейнера также равна полному экрану */
@@ -61,8 +77,15 @@ export default {
     justify-content: center; /* Выравниваем по центру по горизонтали */
     align-items: center; /* Выравниваем по центру по вертикали */
     overflow: hidden; /* Это можно оставить, чтобы скрыть любой избыточный контент */
+    color: white; /* Цвет текста */
 }
-
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
 .image {
     height: 100%; /* Изображение на 100% высоты контейнера */
     width: 100%; /* Изображение на 100% ширины контейнера */
@@ -72,38 +95,29 @@ export default {
 .right-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 10px; /* Расположите кнопку на 10px от верхней части */
-    right: 10px; /* Расположите кнопку на 10px от правого края */
+    top: 120px; /* Расположите кнопку на 10px от верхней части */
+    right: 120px; /* Расположите кнопку на 10px от правого края */
     font-size: 36px; /* Размер текста на кнопке */
-    color: yellow; /* Цвет текста */
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для кнопки */
-    border: none; /* Убираем границу кнопки */
-    padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
 
 .right-bottom-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    bottom: 10px; /* Расположите кнопку на 10px от верхней части */
-    right: 10px; /* Расположите кнопку на 10px от правого края */
-    font-size: 36px; /* Размер текста на кнопке */
-    color: yellow; /* Цвет текста */
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для кнопки */
-    border: none; /* Убираем границу кнопки */
+    bottom: 120px; /* Расположите кнопку на 10px от верхней части */
+    right: 120px; /* Расположите кнопку на 10px от правого края */
+    font-size: 45px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
+    text-align: right;
 }
 
 .left-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 10px; /* Расположите кнопку на 10px от верхней части */
-    left: 10px; /* Расположите кнопку на 10px от правого края */
+    top: 120px; /* Расположите кнопку на 10px от верхней части */
+    left: 120px; /* Расположите кнопку на 10px от правого края */
     font-size: 36px; /* Размер текста на кнопке */
-    color: yellow; /* Цвет текста */
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для кнопки */
-    border: none; /* Убираем границу кнопки */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }

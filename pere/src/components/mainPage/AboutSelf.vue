@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <div style="border: 1px solid black; margin: 0 auto">
+        <div style="margin: 0 auto">
             <img class="image" src="../../assets/imgs/mainPage/pereDen.jpg" style="width: 300px">
         </div>
         <div>
-            <h1>Денис перевозников</h1>
+            <h1 >Денис перевозников</h1>
 
             <p>
                 Начиная каждый проект,
@@ -23,13 +23,19 @@
                 и делать зарисовки. И не важно пригодится это или нет, чаще всего все это
                 делается на подсознании и в последствие может всплыть в люблю секунду.
             </p>
-
         </div>
     </div>
 </template>
 
 <style scoped>
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
 p {
+    font-size: 20px;
     margin-bottom: 16px;
 }
 
@@ -37,6 +43,6 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 10px; /* Отступы между колонками */
-    margin: 120px;
+    margin: 80px 120px;
 }
 </style>

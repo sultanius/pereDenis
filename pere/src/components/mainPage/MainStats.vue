@@ -25,8 +25,9 @@
 <style scoped>
 .test {
     border-left: 1px solid black;
-    padding: 12px;
+    padding-left: 16px;
     font-size: 20px;
+    padding-bottom: 0;
 }
 
 h1 {
@@ -34,13 +35,13 @@ h1 {
 }
 
 p {
-    margin-bottom: 16px;
+    font-size: 20px;
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    margin: 120px;
+    margin: 80px 120px;
 }
 </style>
