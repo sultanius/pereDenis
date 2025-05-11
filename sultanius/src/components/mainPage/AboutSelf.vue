@@ -1,10 +1,10 @@
 <template>
     <div class="container">
         <div style="margin: 0 auto">
-            <img class="image" src="../../assets/imgs/mainPage/pereDen.jpg" style="width: 300px">
+            <img src="../../assets/imgs/mainPage/pereDen.jpg" >
         </div>
-        <div>
-            <h1 >Денис перевозников</h1>
+        <div >
+            <h1>ДЕНИС ПЕРЕВОЗНИКОВ</h1>
 
             <p>
                 Начиная каждый проект,
@@ -23,26 +23,47 @@
                 и делать зарисовки. И не важно пригодится это или нет, чаще всего все это
                 делается на подсознании и в последствие может всплыть в люблю секунду.
             </p>
+
+            <PereDesignBlack class="pere-icon" />
         </div>
     </div>
 </template>
 
+<script setup>
+import PereDesign from '../icons/PereDesign.vue'
+import PereDesignBlack from '../icons/PereDesignBlack.vue'
+
+</script>
+
 <style scoped>
+img{
+    object-fit: cover;
+    max-width: 403px;
+}
 h1{
     font-size: 40px;
     font-weight: 600;
-    margin-top: -15px;
     margin-bottom: 20px;
+    line-height: 100%;
 }
 p {
     font-size: 20px;
     margin-bottom: 16px;
+    line-height: 100%;
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 10px; /* Отступы между колонками */
-    margin: 80px 120px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    color: #000000;
+    position: relative;
+}
+.pere-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 </style>

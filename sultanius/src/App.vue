@@ -4,6 +4,7 @@ import AboutSelf from './components/mainPage/AboutSelf.vue';
 import MainStats from './components/mainPage/MainStats.vue';
 import PriceProjects from './components/mainPage/PriceProjects.vue';
 import MainFooter from './components/mainPage/MainFooter.vue';
+import ProjectComp from './components/projects/ProjectComp.vue';
 
 import { ref } from 'vue';
 
@@ -12,23 +13,32 @@ const test = ref('asdasdasdasd');
 
 <template>
 
-   <FirstMain />
-
-   <AboutSelf />
-
-   <MainStats />
-
-   <PriceProjects />
-
-   <MainFooter id="container" />
-
+<!--   <ProjectComp />-->
+<!---->
+    <nav>
+<!--        <RouterLink to="/">Go to Home</RouterLink>-->
+<!--        <RouterLink to="/projects">Go to projects</RouterLink>-->
+    </nav>
+    <main>
+        <RouterView />
+    </main>
 </template>
 
 <style >
+/* Шрифты */
+@font-face {
+    font-family: Involve; /* Название шрифта для использования в CSS */
+    src: url('./fonts/Involve/Involve-Medium.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html, body {
     height: 100%; /* Устанавливаем высоту для html и body */
     margin: 0; /* Убираем отступы */
     scroll-behavior: smooth !important;
+    font-family: Involve, sans-serif;
 }
 html:focus-within {
     scroll-behavior: smooth;

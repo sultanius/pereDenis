@@ -1,74 +1,75 @@
 <template>
+    <div>
+        <h1>СТОИМОСТЬ ПРОЕКТА</h1>
 
-    <h1>СТОИМОСТЬ ПРОЕКТА</h1>
+        <div class="container">
+            <div class="container-image">
+                <img class="image" src="../../assets/imgs/priceProject/archProject.png">
 
-    <div class="container">
-        <div class="container-image">
-            <img class="image" src="../../assets/imgs/mainPage/price.png">
+                <div class="bottom-text">
+                    <div class="bottom-text__item-one">
+                        от 1800 руб\м2
+                    </div>
 
-            <div class="bottom-text">
-                <div class="bottom-text__item-one">
-                    от 1800 руб\м2
-                </div>
-
-                <div class="bottom-text__item-two">
-                    АРХИТЕКТУРНЫЙ ПРОЕКТ
-                </div>
-            </div>
-        </div>
-
-        <div class="container-image">
-            <img class="image" src="../../assets/imgs/mainPage/price.png">
-
-            <div class="bottom-text">
-                <div class="bottom-text__item-one">
-                    от 700 руб\м2
-                </div>
-
-                <div class="bottom-text__item-two">
-                    ДИЗАЙН ИНТЕРЬЕРА
+                    <div class="bottom-text__item-two">
+                        АРХИТЕКТУРНЫЙ ПРОЕКТ
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container-image">
-            <img class="image" src="../../assets/imgs/mainPage/price.png">
+            <div class="container-image">
+                <img class="image" src="../../assets/imgs/priceProject/designInter.png">
 
-            <div class="bottom-text">
-                <div class="bottom-text__item-one">
-                    от 800 руб\м2
-                </div>
+                <div class="bottom-text">
+                    <div class="bottom-text__item-one">
+                        от 700 руб\м2
+                    </div>
 
-                <div class="bottom-text__item-two">
-                    КОНСТРУКТИВНЫЙ ПРОЕКТ
-                </div>
-            </div>
-        </div>
-
-        <div class="container-image">
-            <img class="image" src="../../assets/imgs/mainPage/price.png">
-
-            <div class="bottom-text">
-                <div class="bottom-text__item-one">
-                    от 4000 руб\м2
-                </div>
-
-                <div class="bottom-text__item-two">
-                    ПРОЕКТ ОВ И ВК
+                    <div class="bottom-text__item-two">
+                        ДИЗАЙН ИНТЕРЬЕРА
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container-image">
-            <img class="image" src="../../assets/imgs/mainPage/price.png">
+            <div class="container-image">
+                <img class="image" src="../../assets/imgs/priceProject/construcProject.png">
 
-            <div class="bottom-text">
-                <div class="bottom-text__item-one">
-                    от 30 000 руб\м2
+                <div class="bottom-text">
+                    <div class="bottom-text__item-one">
+                        от 800 руб\м2
+                    </div>
+
+                    <div class="bottom-text__item-two">
+                        КОНСТРУКТИВНЫЙ ПРОЕКТ
+                    </div>
                 </div>
+            </div>
 
-                <div class="bottom-text__item-two">
-                    АВТОРСКИЙ НАДЗОР
+            <div class="container-image">
+                <img class="image" src="../../assets/imgs/priceProject/projectOvIVk.png">
+
+                <div class="bottom-text">
+                    <div class="bottom-text__item-one">
+                        от 4000 руб\м2
+                    </div>
+
+                    <div class="bottom-text__item-two">
+                        ПРОЕКТ ОВ И ВК
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-image">
+                <img class="image" src="../../assets/imgs/priceProject/authorNadzor.png">
+
+                <div class="bottom-text">
+                    <div class="bottom-text__item-one">
+                        от 30 000 руб\м2
+                    </div>
+
+                    <div class="bottom-text__item-two">
+                        АВТОРСКИЙ НАДЗОР
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,19 +81,20 @@ h1{
     font-weight: 600;
     font-size: 40px;
     text-align: right;
-    margin-right: 120px;
-    margin-left: 120px;
 }
 .image {
     max-width: 100%; /* Ограничивает максимальную ширину изображения */
     height: auto; /* Сохраняет пропорции изображения */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20.19%, rgba(0, 0, 0, 0.85) 100%);
 }
 
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 24px;
-    margin: 35px 120px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: black;
 }
 
 .container-image {
@@ -101,6 +103,17 @@ h1{
     justify-content: center; /* Выравниваем по центру по горизонтали */
     align-items: center; /* Выравниваем по центру по вертикали */
     overflow: hidden; /* Это можно оставить, чтобы скрыть любой избыточный контент */
+}
+
+.container-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%; /* Настройте высоту затемнения */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%);
+    pointer-events: none; /* Иногда полезно сделать этот элемент "прозрачным" для кликов */
 }
 
 

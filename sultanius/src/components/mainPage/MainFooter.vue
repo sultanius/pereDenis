@@ -4,7 +4,7 @@
             <div class="container-grid__one" >
                 <PereDesign style="margin-bottom: 24px;"/>
 
-                <p style="margin-bottom: 6px">
+                <p style="margin-bottom: 12px" >
                     +7 (999) 555-33-22
                 </p>
 
@@ -19,17 +19,20 @@
                 <h1>ОБСУДИМ ПРОЕКТ? </h1>
 
                 <form>
-                    <input class="custom-input" placeholder="Имя*" required type="text" name="input" v-model="form.name" />
-                    <input class="custom-input" placeholder="Email*" required type="email" name="input" v-model="form.email" />
-                    <input class="custom-input" placeholder="Телефон" required type="phone" name="input" v-model="form.phone" />
-                    <input class="custom-input" placeholder="Доп.информация" required type="text" name="input" v-model="form.comment" />
+                    <div class="form-inputs">
+                        <input class="custom-input" placeholder="Имя*" required type="text" name="input" v-model="form.name" />
+                        <input class="custom-input" placeholder="Email*" required type="email" name="input" v-model="form.email" />
+                        <input class="custom-input" placeholder="Телефон" required type="phone" name="input" v-model="form.phone" />
+                        <input class="custom-input" placeholder="Доп.информация" required type="text" name="input" v-model="form.comment" />
+                    </div>
+
 <!--                    <div>-->
 <!--                        <input class="custom-input" type="checkbox" id="checkbox" placeholder="Доп.информация" required name="input" v-model="form.comment" />-->
 <!--                        <label for="checkbox">Я даю согласие на обработку персональных данных</label>-->
 <!--                    </div>-->
+                    <FillBtn style="width: 100%; border: 1px solid white; display: block; text-align: center">Отправить</FillBtn>
                 </form>
 
-                <button>Отправить</button>
             </div>
         </div>
 
@@ -38,6 +41,7 @@
 
 <script>
 import PereDesign from '../icons/PereDesign.vue'
+import FillBtn from '../../components/ui/FillBtn.vue'
 
 import { ref, reactive } from 'vue'
 
@@ -66,7 +70,7 @@ h1{
     margin-top: 32px;
     margin-bottom: 32px;
 }
-form{
+.form-inputs{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 32px; /* Отступы между колонками */
@@ -74,19 +78,20 @@ form{
 }
 p{
     font-size: 20px;
+    line-height: 100%;
 }
 .container {
     background-color: #1A1A1A;
     color: white;
+
 }
 
 .container-grid {
+    max-width: 1520px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 16px; /* Отступы между колонками */
-    margin-right: 120px;
-    margin-left: 120px;
-    padding-top: 60px;
     padding-bottom: 60px;
 }
 .container-grid__one {

@@ -2,7 +2,40 @@
     <div class="container">
         <img class="image" src="../../assets/imgs/mainPage/mainFirstImg.png" >
 
-        <div class="left-top-text" @click="isHeaderOpen = true"> BURGER </div>
+        <div class="left-top-text" >
+            <div class="menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+
+                <div class="menu-list">
+
+                    <div style="margin-left: 15px">
+                        <PereDesign  style="padding-bottom: 100px; display: block"/>
+
+                        <ul>
+                            <li @click="navigateTo('/')">
+                                <a href="/">ГЛАВНАЯ</a>
+                            </li>
+                            <li >
+                                <a href="#about-me">ОБО МНЕ</a>
+                            </li>
+                            <li @click="navigateTo('/projects')">ПРОЕКТЫ</li>
+                            <li>
+                                <a href="#price-project">СТОИМОСТЬ</a>
+                            </li>
+                            <li>
+                                <a href="#contacts">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p>+7 (921) 443 23 10</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         <div class="right-top-text"> ru|en </div>
 
@@ -15,47 +48,33 @@
                 КОМФОРТНОЙ ЖИЗНИ
             </div>
         </div>
-
-        <transition name="modal" v-if="isHeaderOpen">
-            <div class="modal">
-                <div class="modal-container"  >
-                    <div>
-                        <PereDesign  />
-
-                        <nav>
-                            <p>ГЛАВНАЯ</p>
-                            <p>ОБО МНЕ</p>
-                            <p>ПРОЕКТЫ</p>
-                            <p>СТОИМОСТЬ</p>
-                            <p>КОНТАКТЫ</p>
-                        </nav>
-                    </div>
-
-                    <div>
-                        <p>+7 (921) 443 23 10</p>
-                        <button class="close-button" @click="isHeaderOpen = false">✖</button>
-                    </div>
-                </div>
-            </div>
-        </transition>
     </div>
 </template>
 
 <script>
 import PereDesign from '../icons/PereDesign.vue'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
     components: { PereDesign },
     setup() {
+        const router = useRouter();
         const isHeaderOpen = ref(false);
 
         const toggleHeader = () => {
             isHeaderOpen.value = !isHeaderOpen.value;
         };
+
+        const navigateTo = (to) => {
+            console.log(1, to)
+            router.replace(to);
+        };
+
         return {
             isHeaderOpen,
-            toggleHeader
+            toggleHeader,
+            navigateTo,
         };
     }
 };
@@ -63,6 +82,10 @@ export default {
 </script>
 
 <style scoped>
+p{
+    font-size: 20px;
+    line-height: 100%;
+}
 nav {
     text-align: left;
     display: flex;
@@ -79,24 +102,17 @@ nav {
     overflow: hidden; /* Это можно оставить, чтобы скрыть любой избыточный контент */
     color: white; /* Цвет текста */
 }
-.modal-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    text-align: center;
-}
+
 .image {
     height: 100%; /* Изображение на 100% высоты контейнера */
     width: 100%; /* Изображение на 100% ширины контейнера */
-    object-fit: cover; /* Это свойство сохраняет пропорции изображения и обрезает его при необходимости */
 }
 
 .right-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 120px; /* Расположите кнопку на 10px от верхней части */
-    right: 120px; /* Расположите кнопку на 10px от правого края */
+    top: 80px;
+    right: 200px;
     font-size: 36px; /* Размер текста на кнопке */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
@@ -104,8 +120,8 @@ nav {
 .right-bottom-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    bottom: 120px; /* Расположите кнопку на 10px от верхней части */
-    right: 120px; /* Расположите кнопку на 10px от правого края */
+    bottom: 80px;
+    right: 200px;
     font-size: 45px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
@@ -115,12 +131,106 @@ nav {
 .left-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 120px; /* Расположите кнопку на 10px от верхней части */
-    left: 120px; /* Расположите кнопку на 10px от правого края */
+    top: 80px;
+    left: 200px;
     font-size: 36px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+    color: #FFFFFF;
+}
+.burger {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+}
+.burger::before,
+.burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background: white;
+}
+.burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 white;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+}
+
+ul{
+    list-style-type: none;
+    font-weight: 400;
+    text-align: start;
+}
+li{
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+li:hover{
+    color: #656565;
+}
+
+.menu-list {
+    font-size: 20px;
+    border: 1px solid black;
+    top: -80px;
+    left: 0;
+    position: absolute;
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    /*gap: 12px;*/
+    /*margin: 0;*/
+    transform: translateX(-200%);
+    transition: .7s;
+    width: 280px;
+    padding: 35px 0 55px;
+
+    /*display: flex; !* Можно использовать Flexbox для расположения элементов *!*/
+    /*justify-content: center; !* Выравниваем по центру по горизонтали *!*/
+    /*align-items: center; !* Выравниваем по центру по вертикали *!*/
+    /*overflow: hidden; !* Это можно оставить, чтобы скрыть любой избыточный контент *!*/
+    /*color: white; !* Цвет текста *!*/
+}
+
+.burger-checkbox:checked ~ .menu-list {
+    transform: translateX(-200px);
+}
+
 
 
 
