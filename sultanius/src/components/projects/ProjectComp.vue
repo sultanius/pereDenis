@@ -39,7 +39,7 @@
     </div>
 
     <div class="preview-container">
-        <ProjectPreviewItem  v-for="(item, i) in projectPreviews" :image="item.image" :item="item" :key="item" @click="goToProject(item.nameId)"/>
+        <ProjectPreviewItem  v-for="(item, i) in projectPreviews" :image="item.image" :item="item" :key="item" @click="goToProject(item.pathUrl)"/>
     </div>
 
 </template>
@@ -50,39 +50,200 @@ import ProjectHeader from './ProjectHeader.vue'
 import ProjectPreviewItem from './ProjectPreviewItem.vue'
 import { useRouter } from 'vue-router'
 
+const STAGE_PROCESS = {
+    process: 'Строительство',
+    type_project: 'Типовой проект',
+    done: 'Реализован',
+    waiting: 'Ожидание строительства',
+    concept: 'Концепт',
+}
+
 const projectPreviews = [
     {
         id: 1,
         year: '2024',
         name: 'КП РЕПИНО ПАРК',
-        nameId: 'КП-РЕПИНО-ПАРК-1',
-        stageProcess: 'Строительство',
+        pathUrl: 'kp-repino-park-1',
+        stageProcess: STAGE_PROCESS.process,
         square: '480 м2',
-        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/9-key-images%2F9Keys-01.jpg?alt=media&token=9a7644cf-d32c-4789-91a2-fabb6a3821cc',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_1.png?alt=media&token=5c87dc54-c8bc-4d82-980f-14910a7bd25e',
     },
     {
         id: 2,
         year: '2024',
         name: 'КП РЕПИНО ПАРК',
-        nameId: 'КП-РЕПИН-ПАРК-2',
-        stageProcess: 'Строительство',
+        pathUrl: 'kp-repino-park-1',
+        stageProcess: STAGE_PROCESS.process,
         square: '250 м2',
-        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/9-key-images%2F9Keys-01.jpg?alt=media&token=9a7644cf-d32c-4789-91a2-fabb6a3821cc',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_2.png?alt=media&token=fa68d9b2-e112-4602-a5bb-10af05405c97',
     },
     {
         id: 3,
         year: '2023',
         name: 'PERE_DESIGN_H3',
-        nameId: 'PERE_DESIGN_H3',
-        stageProcess: 'Типовой проект',
+        pathUrl: 'pere-design-h3',
+        stageProcess: STAGE_PROCESS.type_project,
         square: '160 м2',
-        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/9-key-images%2F9Keys-14.jpg?alt=media&token=76c57bc4-a668-42ab-8a69-f30a3f259569',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_3.jpg?alt=media&token=57a892dd-3fc1-4968-9333-af262eac02ef',
+    },
+    {
+        id: 4,
+        year: '2023',
+        name: 'ОРЕХОВО',
+        pathUrl: 'orekhovo',
+        stageProcess: STAGE_PROCESS.done,
+        square: '160 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_4.png?alt=media&token=9b0125e9-808e-43ea-85dd-c649d9753203',
+    },
+    {
+        id: 5,
+        year: '2024',
+        name: 'КП ПЕТЕРГОФСКИЕ ДАЧИ',
+        pathUrl: 'kp-petergofskie-dachi',
+        stageProcess: STAGE_PROCESS.waiting,
+        square: '160 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_5.png?alt=media&token=31bacf60-f9c2-4622-af01-811e50d232fb',
+    },
+    {
+        id: 6,
+        year: '2022',
+        name: 'КП ЗЕЛЕНЫЙ ОСТРОВ',
+        pathUrl: 'kp-zelenyj-ostrov',
+        stageProcess: STAGE_PROCESS.done,
+        square: '160 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_6.png?alt=media&token=66e13a86-9872-4b36-9f51-ebf03bb2199d',
+    },
+    {
+        id: 7,
+        year: '2023',
+        name: 'НИЗИНО',
+        pathUrl: 'NIZINO-1',
+        stageProcess: STAGE_PROCESS.done,
+        square: '230 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_7.png?alt=media&token=3ec5d1f2-15e4-4749-afe6-3b581c8a39a6',
+    },
+    {
+        id: 8,
+        year: '2021',
+        name: 'ПАРГОЛОВО',
+        pathUrl: 'PARGOLOVO',
+        stageProcess: STAGE_PROCESS.waiting,
+        square: '240 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_8.png?alt=media&token=e52a55b9-3214-4efa-a7f7-e7213ed17080',
+    },
+    {
+        id: 9,
+        year: '2023',
+        name: 'НИЗИНО',
+        pathUrl: 'NIZINO-2',
+        stageProcess: STAGE_PROCESS.process,
+        square: '250 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_9.png?alt=media&token=5b4829c7-e845-456a-9bc4-62a4f094551c',
+    },
+    {
+        id: 10,
+        year: '2022',
+        name: 'ИСТРА',
+        pathUrl: 'ISTRA',
+        stageProcess: STAGE_PROCESS.waiting,
+        square: '270 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_10.png?alt=media&token=2078fd26-c3dc-4df5-a18e-445df47fdbda',
+    },
+    {
+        id: 11,
+        year: '2023',
+        name: 'ИЖЕСВК',
+        pathUrl: 'IZHESVK',
+        stageProcess: STAGE_PROCESS.process,
+        square: '210 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_11.png?alt=media&token=a028c81b-8b7c-451c-b577-bc8189508735',
+    },
+    {
+        id: 12,
+        year: '2023',
+        name: '111',
+        pathUrl: 'kp',
+        stageProcess: '111 проект',
+        square: '111 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_12.png?alt=media&token=214a4a55-51aa-466a-ab06-baba89da192e',
+    },
+    {
+        id: 13,
+        year: '2024',
+        name: 'СЕРПУХОВ',
+        pathUrl: 'SERPUKHOV',
+        stageProcess: STAGE_PROCESS.process,
+        square: '160 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_13.png?alt=media&token=66dc5162-7a04-4906-a543-7dedb9406ce0',
+    },
+    {
+        id: 14,
+        year: '2022',
+        name: 'ЦВЕТКОВО',
+        pathUrl: 'CVETKOVO',
+        stageProcess: STAGE_PROCESS.done,
+        square: '190 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_14.png?alt=media&token=269dfe20-014a-4ab9-a5fd-94dcbf6991a6',
+    },
+    {
+        id: 15,
+        year: '2023',
+        name: 'НАРА',
+        pathUrl: 'NARA',
+        stageProcess: STAGE_PROCESS.process,
+        square: '270 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_15.png?alt=media&token=8dab2da6-36f2-442b-aac2-3117b15678eb',
+    },
+    {
+        id: 16,
+        year: '2024',
+        name: 'КП ВИТЯЗЬ',
+        pathUrl: 'KP-VITYAZ',
+        stageProcess: STAGE_PROCESS.process,
+        square: '680 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_16.png?alt=media&token=9377a1c8-f069-4ca5-b49f-275caf83f456',
+    },
+    {
+        id: 17,
+        year: '2024',
+        name: 'СЕРГИЕВ ПОСАД',
+        pathUrl: 'SERGIEV-POSAD',
+        stageProcess: STAGE_PROCESS.waiting,
+        square: '330 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_17.png?alt=media&token=fa1b9f1b-fb76-4e93-b0d8-ac0951cbd191',
+    },
+    {
+        id: 18,
+        year: '2023',
+        name: 'ВИЛЛА СТОУН',
+        pathUrl: 'VILLA-STOUN',
+        stageProcess: STAGE_PROCESS.concept,
+        square: '190 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_18.png?alt=media&token=7d577126-7168-40bf-a919-7e8056f5ba71',
+    },
+    {
+        id: 19,
+        year: '2023',
+        name: 'НИЗИНО',
+        pathUrl: 'NIZINO-3',
+        stageProcess: STAGE_PROCESS.process,
+        square: '240 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_19.png?alt=media&token=c1c76dda-d21b-4b15-8eb1-c740d40b62ca',
+    },
+    {
+        id: 20,
+        year: '2025',
+        name: 'КП ЮККОВСКОЕ',
+        pathUrl: 'KP-YUKKOVSKOE',
+        stageProcess: STAGE_PROCESS.process,
+        square: '150 м2',
+        image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_20.png?alt=media&token=db3b659f-7342-454a-aa8c-2d0fe566cf8b',
     },
 ]
 const router = useRouter();
 
-const goToProject = (nameId) => {
-    router.push(`/projects/${nameId}`)
+const goToProject = (pathUrl) => {
+    router.push(`/projects/${pathUrl}`)
 }
 
 const setActive = (index) => {
