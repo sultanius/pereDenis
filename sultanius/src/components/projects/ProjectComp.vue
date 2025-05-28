@@ -72,7 +72,7 @@ const projectPreviews = [
         id: 2,
         year: '2024',
         name: 'КП РЕПИНО ПАРК',
-        pathUrl: 'kp-repino-park-1',
+        pathUrl: 'kp-repino-park-2',
         stageProcess: STAGE_PROCESS.process,
         square: '250 м2',
         image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_2.png?alt=media&token=fa68d9b2-e112-4602-a5bb-10af05405c97',

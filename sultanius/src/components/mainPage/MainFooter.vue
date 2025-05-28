@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
-        <div class="container-grid">
-            <div class="container-grid__one" >
+    <div class="main-footer-container">
+        <div class="main-footer-container-grid">
+            <div class="main-footer-container-grid__one" >
                 <PereDesign style="margin-bottom: 24px;"/>
 
                 <p style="margin-bottom: 12px" >
@@ -80,13 +80,12 @@ p{
     font-size: 20px;
     line-height: 100%;
 }
-.container {
+.main-footer-container {
     background-color: #1A1A1A;
     color: white;
-
 }
 
-.container-grid {
+.main-footer-container-grid {
     max-width: 1520px;
     margin: 0 auto;
     display: grid;
@@ -94,7 +93,7 @@ p{
     grid-gap: 16px; /* Отступы между колонками */
     padding-bottom: 60px;
 }
-.container-grid__one {
+.main-footer-container-grid__one {
     display: flex;
     flex-direction: column;
     justify-content: end;
