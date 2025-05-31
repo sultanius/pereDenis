@@ -37,7 +37,7 @@
     <div class="container">
         <div class="image-container">
             <div v-for="(image, index) in projectImageMap[route.params.name]" :key="index" :class="['image-item', image.widthClass]">
-                <img v-if="image.url"  :src="image.url" >
+                <img v-if="image.url"  :src="image.url" loading="lazy">
             </div>
         </div>
     </div>
@@ -194,9 +194,163 @@ const projectImageMap = {
             widthClass: 'w-50',
         },
     ],
-    '1': [
+    'kp-petergofskie-dachi': [
         {
-            url:'',
+            url:'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-petergofskie-dachi%2Fkp-petergofskie-dachi-2.png?alt=media&token=8dd73a1d-89d8-4a85-90b1-f1d95ba251b3',
+            widthClass: 'w-100',
+        },
+        {
+            url:'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-petergofskie-dachi%2Fkp-petergofskie-dachi-3.png?alt=media&token=0eba01d3-1204-400f-b2c1-23d0fa423c8b',
+            widthClass: 'w-50',
+        },
+        {
+            url:'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-petergofskie-dachi%2Fkp-petergofskie-dachi-4.png?alt=media&token=beb68204-2d15-4738-b522-c4356ee3816f',
+            widthClass: 'w-50',
+        },
+        {
+            url:'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-petergofskie-dachi%2Fkp-petergofskie-dachi-5.png?alt=media&token=cbce4309-d4b9-49e4-8ae2-d1e99a47dc5e',
+            widthClass: 'w-100',
+        },
+    ],
+    'kp-zelenyj-ostrov': [
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-2.png?alt=media&token=2de6d804-8a65-44d7-8cbb-75e28b02a6b5',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-3.png?alt=media&token=f55a83bb-03ff-48ff-83a8-bea65f9f7872',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-4.png?alt=media&token=2200d284-6000-4395-9837-cbe1bff25d5a',
+            widthClass: 'w-50',
+        },
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-5.png?alt=media&token=50462cb3-ddae-4142-873d-aa524ac0d9be',
+            widthClass: 'w-50',
+        },
+    ],
+    'NIZINO-1': [
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-2.png?alt=media&token=bb36d439-592a-4c7b-bfbd-3fbd789bb263',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-3.png?alt=media&token=9053a055-4726-443a-b35a-c575c8f5b787',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-4.png?alt=media&token=f79efc40-d202-43de-850c-fe7c9601eafc',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-5.png?alt=media&token=168c39d0-3f5e-4217-9c33-8a9753dc796f',
+            widthClass: 'w-100',
+        },
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-6.png?alt=media&token=a06895de-6d4a-447d-b04f-ca7994c046ef',
+            widthClass: 'w-50',
+        },
+    ],
+    'PARGOLOVO': [
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FPARGOLOVO%2FPARGOLOVO-2.png?alt=media&token=d148e4a6-2add-4210-9277-0c6039850f13',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FPARGOLOVO%2FPARGOLOVO-3.png?alt=media&token=f075683f-2beb-4c12-bce8-71a85c2dec5b',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FPARGOLOVO%2FPARGOLOVO-4.png?alt=media&token=082a379e-e847-4586-b4b5-ce0753c47f7b',
+            widthClass: 'w-50',
+        },
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FPARGOLOVO%2FPARGOLOVO-5.png?alt=media&token=c62ff418-8a48-4a78-a375-bcfeef9f7cb2',
+            widthClass: 'w-50',
+        },
+    ],
+    'NIZINO-2': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'ISTRA': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'IZHESVK': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'KORKINSKIE-CHOLMI': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'SERPUKHOV': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'CVETKOVO': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'NARA': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'KP-VITYAZ': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'SERGIEV-POSAD': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'VILLA-STOUN': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'NIZINO-3': [
+        {
+            url: '',
+            widthClass: 'w-50',
+        },
+    ],
+    'KP-YUKKOVSKOE': [
+        {
+            url: '',
             widthClass: 'w-50',
         },
     ],
