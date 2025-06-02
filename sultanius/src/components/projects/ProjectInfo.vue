@@ -71,9 +71,51 @@ const projectMainImageMap = {
     'kp-petergofskie-dachi': [
         '',
     ],
-    'kp1': [
+    'kp-zelenyj-ostrov': [
         '',
-    ]
+    ],
+    'NIZINO-1': [
+        '',
+    ],
+    'PARGOLOVO': [
+        '',
+    ],
+    'NIZINO-2': [
+        '',
+    ],
+    'ISTRA': [
+        '',
+    ],
+    'IZHESVK': [
+        '',
+    ],
+    'KORKINSKIE-CHOLMI': [
+        '',
+    ],
+    'SERPUKHOV': [
+        '',
+    ],
+    'CVETKOVO': [
+        '',
+    ],
+    'NARA': [
+        '',
+    ],
+    'KP-VITYAZ': [
+        '',
+    ],
+    'SERGIEV-POSAD': [
+        '',
+    ],
+    'VILLA-STOUN': [
+        '',
+    ],
+    'NIZINO-3': [
+        '',
+    ],
+    'KP-YUKKOVSKOE': [
+        '',
+    ],
 }
 
 const projectImageMap = {
@@ -284,73 +326,453 @@ const projectImageMap = {
     ],
     'NIZINO-2': [
         {
-            url: '',
-            widthClass: 'w-50',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-2%2FNIZINO-2-2.png?alt=media&token=675104ce-132a-4dab-9cc4-8b482e2e2b11',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-2%2FNIZINO-2-3.png?alt=media&token=ed9edb19-b37c-43ac-9629-c20d1c149824',
+            widthClass: 'w-100',
         },
     ],
     'ISTRA': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-2.png?alt=media&token=c16bf07a-b258-4c59-8ea1-a081e3f260a7',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-3.png?alt=media&token=5f4a8a90-6b5f-4c3a-9cac-99ed94cd4390',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-4.png?alt=media&token=93cc4f50-e995-41e1-98e8-06200c86258d',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-5.png?alt=media&token=feb2c859-eef0-4b3d-bbbf-f0f3230b46c1',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-6.png?alt=media&token=ed772594-5736-4011-ab8d-c47f58fab29d',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-7.png?alt=media&token=79327bb7-5f9b-49b3-b6cf-c81ab54e4b20',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-8.png?alt=media&token=14a36e32-10fe-4b60-a806-5a75efb9cbff',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-9.png?alt=media&token=d0abb609-6082-44d5-b47b-e4aa242d6f19',
+            widthClass: 'w-50',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-10.png?alt=media&token=13f7a6b9-a3c7-4215-989c-ef6c1b5ad1fe',
             widthClass: 'w-50',
         },
     ],
     'IZHESVK': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-2.png?alt=media&token=a0d09666-127b-4e80-a4af-321a43beabe0',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-3.png?alt=media&token=b1e0b84c-5bca-43ea-b9ce-a7646c259e89',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-4.png?alt=media&token=da6e9f52-cc78-4284-959b-341e3dbd0164',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-5.png?alt=media&token=519adbb7-5025-455a-9d48-4628013f3145',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-7.png?alt=media&token=a7a9e14d-8f6b-4b38-9bac-2b361c6b8964',
+            widthClass: 'w-100',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-8.png?alt=media&token=cf88f570-2aa0-4a74-8338-1e5093275368',
             widthClass: 'w-50',
         },
     ],
     'KORKINSKIE-CHOLMI': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-2.png?alt=media&token=26c5f260-5e2e-4751-a44a-235dd3adec7a',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-3.png?alt=media&token=d3135cc6-92d8-45a6-9263-599709515427',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-4.png?alt=media&token=9c60d748-a461-44a8-bba1-ea2d3209072e',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-5.png?alt=media&token=5367375f-30df-4d9b-8584-89f77190ce04',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-6.png?alt=media&token=bf3608e4-c6b4-4554-a66e-19cd330b2114',
+            widthClass: 'w-100',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-7.png?alt=media&token=a9556d96-efb4-4159-87bf-c23c7ed0a86b',
             widthClass: 'w-50',
         },
     ],
     'SERPUKHOV': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-2.png?alt=media&token=b234d68f-180e-48a4-8d5d-822b502b8755',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-3.png?alt=media&token=edb14add-706a-4a81-b00a-6ff8a9a01f97',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-4.png?alt=media&token=e5010b00-8f44-4e68-859d-fafa23205a2d',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-5.png?alt=media&token=b567e809-8b85-4ce6-a78a-a27abdce61ac',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-6.png?alt=media&token=f2747fe5-306a-4e67-bd1a-4c8317cdc558',
+            widthClass: 'w-100',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-7.png?alt=media&token=d1f3125e-1405-4a76-94b6-14fd667fffdc',
             widthClass: 'w-50',
         },
     ],
     'CVETKOVO': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-2.png?alt=media&token=98a93ca2-4ef2-42e6-a971-f180db2b9344',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-3.png?alt=media&token=a11574de-ff5a-4d3c-89c5-44376c3c69d5',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-4.png?alt=media&token=a07e4836-76f4-4083-8e73-2fd63373f854',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-5.png?alt=media&token=2875a12a-e71b-4608-9119-8937905fd4dc',
+            widthClass: 'w-100',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-6.png?alt=media&token=7a4dfb91-a351-4549-b3b8-4f9e41f3f0bc',
             widthClass: 'w-50',
         },
     ],
     'NARA': [
         {
-            url: '',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-2.png?alt=media&token=b2813a70-6979-4269-b97a-d109ef050e7e',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-3.png?alt=media&token=922af5b1-138d-47c6-b2c6-244399c89fd4',
             widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-4.png?alt=media&token=ac3690eb-020e-4908-beb4-d647f583e709',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-5.png?alt=media&token=6bb6e5f4-ed82-417b-9a8d-4dc3ae6777a7',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-6.png?alt=media&token=efec8503-1e83-4e0b-ada2-2a69294f24e6',
+            widthClass: 'w-100',
         },
     ],
     'KP-VITYAZ': [
         {
-            url: '',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-2.jpg?alt=media&token=e6613065-6bce-4b9a-8327-4522a63e9589',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-3.jpg?alt=media&token=83130b41-14d6-4b1b-a8d2-c0a1f30b5251',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-4.jpg?alt=media&token=6059adf6-fc6d-4388-96cb-22c32e93b79a',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-5.jpg?alt=media&token=b3450136-9f21-40b4-8240-2674603d50fa',
+            widthClass: 'w-100,
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-6.jpg?alt=media&token=b00b021f-5c17-4506-b3a5-3973b513e745',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-7.jpg?alt=media&token=2dcf4d9f-bf32-42ff-aa8d-d16ebf58f1f0',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-8.jpg?alt=media&token=bb4754cd-48d3-4957-8cdf-5eaf3f74ee47',
             widthClass: 'w-50',
         },
     ],
     'SERGIEV-POSAD': [
         {
-            url: '',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-2.jpg?alt=media&token=ab33d86d-736d-4de2-9d26-3e2052df47cb',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-3.jpg?alt=media&token=f715147f-3abc-4e3f-8561-846cb8772d94',
             widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-4.jpg?alt=media&token=0721f0d6-008e-4d61-846a-296deaeaf7c3',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-5.jpg?alt=media&token=12cd572c-cadd-4491-8040-a4e463eff0cf',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-6.jpg?alt=media&token=d266a244-0ad3-4378-88dc-6b37a4dfe80e',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-7.jpg?alt=media&token=164ecb4c-efad-4cf6-baa8-bb24e2295745',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-8.jpg?alt=media&token=03e2b76c-cc35-4338-bef6-0843f2ca623c',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-9.jpg?alt=media&token=8e4abeb2-54a0-41d4-8946-603831d6ba86',
+            widthClass: 'w-100',
         },
     ],
     'VILLA-STOUN': [
         {
-            url: '',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-2.jpg?alt=media&token=e7549ff3-2aad-4de9-b4e6-bf15a6b4ef44',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-3.jpg?alt=media&token=31d9699d-7226-4b28-8bd2-95cb0778489e',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-4.jpg?alt=media&token=b799bd27-7848-4b74-96fb-4832e800dc1d',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-5.jpg?alt=media&token=7a6ab74b-a70a-47c5-a1ee-8584fbc1a9cf',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-6.jpg?alt=media&token=c121c18d-580a-4a93-8892-0a96bde1ea2f',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-7.jpg?alt=media&token=58d35719-6c6b-4676-b815-1aa4db682694',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-8.jpg?alt=media&token=e6dfe03d-8914-47a0-8fb9-69cad3a0aff8',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-9.jpg?alt=media&token=d4f37cc5-d5ec-469f-b445-0799a970ee56',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-10.jpg?alt=media&token=0210c8a7-bb83-479e-b9f5-e2a6ac1cc601',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-11.jpg?alt=media&token=ec427393-c99b-4d91-a874-efdcd5080f53',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-13.jpg?alt=media&token=7ef14f68-9038-40d7-964e-ebb185ac8e2f',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-14.jpg?alt=media&token=a6da8fcc-54a2-448e-80c2-debe8a1c29e8',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-15.jpg?alt=media&token=3f8e3fd4-3bc3-41f9-aa1a-41178b02cd65',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-16.jpg?alt=media&token=fb05ebb0-26a3-449a-b01b-94ff04352009',
             widthClass: 'w-50',
         },
     ],
     'NIZINO-3': [
         {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-2.jpg?alt=media&token=219bb1ef-0c54-4f57-957b-83bc9e89f666',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-3.jpg?alt=media&token=5e755ce1-f869-4871-9a67-1f797b8d7829',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-4.jpg?alt=media&token=0aece42c-ff5d-43ed-a76f-247ee3acf803',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-5.jpg?alt=media&token=17258ab9-b117-435a-b5b3-f979fa5cc92d',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-6.jpg?alt=media&token=82a65c73-eef5-400d-8b5e-2839a7389d9e',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-7.jpg?alt=media&token=02405f1a-9aef-40c0-933b-360c522934d3',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-8.jpg?alt=media&token=d4f85dcf-b245-4378-9f62-afc9e5d933d4',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-9.jpg?alt=media&token=a2baf9ea-5d2e-41a8-ba72-fa49ba9e1d01',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-10.jpg?alt=media&token=677db328-b77f-4d01-9ec6-1eae4e1833a6',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-11.jpg?alt=media&token=19caa806-dff1-42ec-b037-ff1c8ee95ae3',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-12.jpg?alt=media&token=6e92e41c-2243-4e67-ada9-cbe1a15da296',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-13.jpg?alt=media&token=cadfc2a5-b6cf-44e3-8f57-885dafa2b684',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-14.jpg?alt=media&token=d6261633-4f11-4626-bacd-3c59a22a06d3',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-15.jpg?alt=media&token=f1749a85-952b-42ad-a577-d360c5af4971',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-16.jpg?alt=media&token=d69adff7-1705-4c24-8c7c-a0299e97b94c',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-17.jpg?alt=media&token=d5436544-3d9e-4c8b-84d4-77bf37753b06',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-18.jpg?alt=media&token=fb5b560b-f1ba-4d30-bea1-4a479d8e9f55',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-19.jpg?alt=media&token=18465e63-0265-45a9-bd29-2686be80b239',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-20.jpg?alt=media&token=d4e22275-c4a7-4971-b8ff-81836de5ca94',
+            widthClass: 'w-50',
+        },
+        {
             url: '',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-21.jpg?alt=media&token=e14bd90f-cf9c-4411-8603-3a1ce2fd628d',
             widthClass: 'w-50',
         },
     ],
     'KP-YUKKOVSKOE': [
         {
-            url: '',
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-2.jpg?alt=media&token=d5c96867-8757-48fc-aef2-ef9b7f4d6ed3',
+            widthClass: 'w-100',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-3.jpg?alt=media&token=159282d0-968d-43e1-b9c0-cd30b54dbb6c',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-4.jpg?alt=media&token=9995e8f0-84ba-474a-99b6-9935a8c5f33f',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-5.jpg?alt=media&token=9d66178b-1c94-4a66-aac3-6a349b89e227',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-6.jpg?alt=media&token=3e320888-624a-44d0-857f-622895235a4c',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-7.jpg?alt=media&token=824be9fb-2eca-4698-abc9-90f47717613f',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-8.jpg?alt=media&token=a3fd57ea-8140-4fce-9f00-3304e1b2b439',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-9.jpg?alt=media&token=65ab26b2-ff0b-4b75-8d19-fa64b4324bda',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-10.jpg?alt=media&token=dfbe86f7-cdf3-4974-ab90-d63af141f438',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-11.jpg?alt=media&token=9231e72d-ccc9-4b2f-8fab-25a015fe965a',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-12.jpg?alt=media&token=497265f0-f6d4-4d32-bf61-4aa628cca9d1',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-13.jpg?alt=media&token=85500e8e-338a-4d52-bf25-c6f365e7311f',
+            widthClass: 'w-50',
+        },
+        {
+            url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-14.jpg?alt=media&token=c36841a4-b048-4a10-93fd-2bf962cddbc8',
             widthClass: 'w-50',
         },
     ],

@@ -162,7 +162,7 @@ const projectPreviews = [
         id: 12,
         year: '2023',
         name: '111',
-        pathUrl: 'kp',
+        pathUrl: 'KORKINSKIE-CHOLMI',
         stageProcess: '111 проект',
         square: '111 м2',
         image: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Flist%2FpereProject_12.png?alt=media&token=214a4a55-51aa-466a-ab06-baba89da192e',
