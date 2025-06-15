@@ -69,52 +69,52 @@ const projectMainImageMap = {
         'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-repino-park-1%2Fkp-repino-park-1-1.png?alt=media&token=aa72fb0b-cb79-461c-949d-70acc40f2988',
     ],
     'kp-petergofskie-dachi': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-1.png?alt=media&token=f6c26e1f-e596-4bf4-ae8d-0730802d41d0',
     ],
     'kp-zelenyj-ostrov': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2Fkp-zelenyj-ostrov%2Fkp-zelenyj-ostrov-1.png?alt=media&token=f6c26e1f-e596-4bf4-ae8d-0730802d41d0',
     ],
     'NIZINO-1': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-1%2FNIZINO-1-1.png?alt=media&token=7ccd6dad-050f-4fba-b7e4-a1a4a2275937',
     ],
     'PARGOLOVO': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FPARGOLOVO%2FPARGOLOVO-1.png?alt=media&token=84988971-6ffe-43dc-a777-0e16199a7978',
     ],
     'NIZINO-2': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-2%2FNIZINO-2-1.png?alt=media&token=0a393ddc-93f5-4aa4-98a5-2ebf4deb6887',
     ],
     'ISTRA': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FISTRA%2FISTRA-1.png?alt=media&token=19df7d78-d604-4d6a-8289-2dc980081c28',
     ],
     'IZHESVK': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FIZHESVK%2FIZHESVK-1.png?alt=media&token=2e7aa58c-4b0d-43a3-9927-5f2f46976737',
     ],
     'KORKINSKIE-CHOLMI': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKORKINSKIE-CHOLMI%2FKORKINSKIE-CHOLMI-1.png?alt=media&token=2d7f2a50-f9ee-495f-99af-deb8feb35a89',
     ],
     'SERPUKHOV': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERPUKHOV%2FSERPUKHOV-1.png?alt=media&token=f45d5726-1cb3-4d9e-b1f4-5c88dff9d1ca',
     ],
     'CVETKOVO': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FCVETKOVO%2FCVETKOVO-1.png?alt=media&token=154f637b-4a56-45df-92d9-ed656858a5e2',
     ],
     'NARA': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNARA%2FNARA-1.png?alt=media&token=ed7e9dbd-0aef-4d74-801d-6e057d088351',
     ],
     'KP-VITYAZ': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-1.jpg?alt=media&token=06f434f2-75af-4650-808a-90f8a9f53b18',
     ],
     'SERGIEV-POSAD': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FSERGIEV-POSAD%2FSERGIEV-POSAD-1.jpg?alt=media&token=2ccb160f-444e-490c-a16c-8f1ffb0394b8',
     ],
     'VILLA-STOUN': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FVILLA-STOUN%2FVILLA-STOUN-1.jpg?alt=media&token=a453368e-aead-446e-8f4b-aeaeab7b3656',
     ],
     'NIZINO-3': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FNIZINO-3%2FNIZINO-3-1.jpg?alt=media&token=a0bbeb27-2202-41b7-9685-6f9c05666f48',
     ],
     'KP-YUKKOVSKOE': [
-        '',
+        'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-YUKKOVSKOE%2FKP-YUKKOVSKOE-1.jpg?alt=media&token=c7d7f6e1-46d6-4bca-b810-352daf2c7f57',
     ],
 }
 
@@ -529,7 +529,7 @@ const projectImageMap = {
         },
         {
             url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-5.jpg?alt=media&token=b3450136-9f21-40b4-8240-2674603d50fa',
-            widthClass: 'w-100,
+            widthClass: 'w-100',
         },
         {
             url: 'https://firebasestorage.googleapis.com/v0/b/nearwater-c02a9.appspot.com/o/pereDesign%2FKP-VITYAZ%2FKP-VITYAZ-6.jpg?alt=media&token=b00b021f-5c17-4506-b3a5-3973b513e745',
