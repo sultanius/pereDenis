@@ -5,15 +5,19 @@ import MainStats from './components/mainPage/MainStats.vue';
 import PriceProjects from './components/mainPage/PriceProjects.vue';
 import MainFooter from './components/mainPage/MainFooter.vue';
 import ProjectComp from './components/projects/ProjectComp.vue';
+import ProjectHeader from './components/projects/ProjectHeader.vue'
 
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'
 
 const test = ref('asdasdasdasd');
+const router = useRouter();
+
 </script>
 
 <template>
 
-<!--   <ProjectComp />-->
+   <ProjectHeader v-if="router.currentRoute.value.fullPath !== '/'"/>
 <!---->
     <nav>
 <!--        <RouterLink to="/">Go to Home</RouterLink>-->
@@ -22,23 +26,73 @@ const test = ref('asdasdasdasd');
     <main>
         <RouterView />
     </main>
+
+    <MainFooter id="contacts" />
 </template>
 
 <style >
+@media (max-width: 768px) {
+    .hide-on-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-on-dekstop{
+        display: none;
+    }
+}
+
 /* Шрифты */
 @font-face {
-    font-family: Involve; /* Название шрифта для использования в CSS */
-    src: url('./fonts/Involve/Involve-Medium.ttf') format('truetype'); /* Путь к файлу шрифта */
-    font-weight: normal;
+    font-family: 'FuturaLightC';
+    /*src: url('./fonts/Involve/ofont.ru_a_Avantelt.ttf') format('truetype');*/
+    src: url('./fonts/Involve/FuturaLightC.ttf') format('truetype');
+    /*src: url('./fonts/Involve/ofont.ru_Hero.ttf') format('truetype');*/
+    font-weight: 500; /* Medium обычно это 500 */
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Involve';
+    src: url('./fonts/Involve/Involve-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium обычно это 500 */
+    font-style: normal;
+    font-display: swap;
+}
+
+/*@font-face {*/
+/*    font-family: 'Involve';*/
+/*    src: url('./fonts/Involve/Involve-MediumOblique.ttf') format('truetype');*/
+/*    font-weight: 500;*/
+/*    font-style: oblique; !* или italic, если в названии italic *!*/
+/*    font-display: swap;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Involve';*/
+/*    src: url('./fonts/Involve/Involve-SemiBold.ttf') format('truetype');*/
+/*    font-weight: 600; !* SemiBold *!*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Involve';*/
+/*    src: url('./fonts/Involve/Involve-Bold.ttf') format('truetype');*/
+/*    font-weight: 700; !* Bold обычно это 700 *!*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
+
 
 html, body {
     height: 100%; /* Устанавливаем высоту для html и body */
     margin: 0; /* Убираем отступы */
     scroll-behavior: smooth !important;
-    font-family: Involve, sans-serif;
+    font-family: 'FuturaLightC', Arial, sans-serif;
+    color: #3d3d3d;
 }
 html:focus-within {
     scroll-behavior: smooth;

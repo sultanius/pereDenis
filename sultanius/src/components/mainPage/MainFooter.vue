@@ -1,7 +1,9 @@
 <template>
     <div class="main-footer-container">
         <div class="main-footer-container-grid">
-            <div class="main-footer-container-grid__one" >
+            <div class="main-footer-container-grid__one grid-block--bottom" >
+                <h1 class="hide-on-dekstop">КОНТАКТЫ</h1>
+
                 <PereDesign style="margin-bottom: 24px;"/>
 
                 <p style="margin-bottom: 12px" >
@@ -12,10 +14,14 @@
                     info@pere.design
                 </p>
 
-                <div style="font-size: 15px;">© 2025 | ООО "Pere.Design" | Политика конфиденциальности</div>
+                <div style="font-size: 15px;">
+                    © 2025 | ООО "Pere.Design" |
+                    <br class="hide-on-dekstop">
+                    Политика конфиденциальности
+                </div>
             </div>
 
-            <div>
+            <div class="grid-block--top">
                 <h1>ОБСУДИМ ПРОЕКТ? </h1>
 
                 <form>
@@ -83,6 +89,7 @@ p{
 .main-footer-container {
     background-color: #1A1A1A;
     color: white;
+    margin-top: 80px;
 }
 
 .main-footer-container-grid {
@@ -98,6 +105,31 @@ p{
     flex-direction: column;
     justify-content: end;
     padding-top: 200px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .main-footer-container-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+    .grid-block--top {
+        order: 1;
+    }
+    .grid-block--bottom {
+        order: 2;
+    }
+
+    .form-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .main-footer-container-grid__one {
+        padding-top: 30px;
+    }
 }
 
 /* Сбрасываем все стили */

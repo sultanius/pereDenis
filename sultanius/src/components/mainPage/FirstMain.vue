@@ -17,14 +17,14 @@
                                 <a href="/">ГЛАВНАЯ</a>
                             </li>
                             <li >
-                                <a href="#about-me">ОБО МНЕ</a>
+                                <a>ОБО МНЕ</a>
                             </li>
                             <li @click="navigateTo('/projects')">ПРОЕКТЫ</li>
                             <li>
                                 <a href="#price-project">СТОИМОСТЬ</a>
                             </li>
-                            <li>
-                                <a href="#contacts">КОНТАКТЫ</a>
+                            <li @click="navigateTo('/contacts')">
+                                <a>КОНТАКТЫ</a>
                             </li>
                         </ul>
                     </div>
@@ -95,7 +95,7 @@ nav {
 }
 .container {
     height: 100vh; /* Высота контейнера равна полному экрану */
-    width: 100vw; /* Ширина контейнера также равна полному экрану */
+    width: 100%; /* Ширина контейнера также равна полному экрану */
     display: flex; /* Можно использовать Flexbox для расположения элементов */
     justify-content: center; /* Выравниваем по центру по горизонтали */
     align-items: center; /* Выравниваем по центру по вертикали */
@@ -112,7 +112,7 @@ nav {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
     top: 80px;
-    right: 200px;
+    right: 205px;
     font-size: 36px; /* Размер текста на кнопке */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
@@ -120,8 +120,8 @@ nav {
 .right-bottom-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    bottom: 80px;
-    right: 200px;
+    bottom: 85px;
+    right: 205px;
     font-size: 45px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
@@ -131,8 +131,8 @@ nav {
 .left-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 80px;
-    left: 200px;
+    top: 85px;
+    left: 205px;
     font-size: 36px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
@@ -203,7 +203,7 @@ li:hover{
 .menu-list {
     font-size: 20px;
     border: 1px solid black;
-    top: -80px;
+    top: -85px;
     left: 0;
     position: absolute;
     background-color: #000000;
@@ -231,41 +231,4 @@ li:hover{
     transform: translateX(-200px);
 }
 
-
-
-
-.modal {
-    position: fixed; /* Убедитесь, что модальное окно фиксировано и занимает всю высоту */
-    top: 0;
-    left: 0;
-    padding: 55px;
-    width: 281px; /* Задайте ширину 300 пикселей */
-    height: 100%; /* Высота окна – 100% от высоты экрана */
-    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон для модального окна */
-    color: white; /* Цвет текста внутри модального окна */
-    /*transform: translateX(100%); !* Скрываем модальное окно с помощью трансформации *!*/
-    transition: transform 0.5s ease; /* Плавный переход для открытия/закрытия */
-    z-index: 10; /* Высокий z-index, чтобы окно появлялось над остальными элементами */
-}
-
-.modal-enter-active, .modal-leave-active {
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход для открытия и закрытия */
-}
-
-.modal-enter, .modal-leave-to /* .modal-leave-active в <2.1.8 */ {
-    opacity: 0;  /* Пауза при уходе */
-}
-
-.modal-enter-to, .modal-leave {
-    transition: opacity 1s ease, transform 1s ease; /* Плавный переход для открытия и закрытия */
-}
-
-.close-button {
-    background: transparent; /* Фон прозрачный для кнопки закрытия */
-    color: white; /* Цвет текста кнопки закрытия */
-    font-size: 30px; /* Размер шрифта для кнопки закрытия */
-    border: none; /* Убираем границу */
-    cursor: pointer; /* Курсор в виде указателя при наведении */
-    margin-bottom: 20px; /* Отступы для удобного размещения */
-}
 </style>

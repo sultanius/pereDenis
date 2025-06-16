@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="main-stats-container">
         <div class="test">
             <h1 id="count1">26+</h1>
             <p>Домов спроектировано</p>
@@ -71,7 +71,7 @@ p {
     color: #656565;
 }
 
-.container{
+.main-stats-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;

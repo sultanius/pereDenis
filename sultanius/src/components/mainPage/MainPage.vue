@@ -18,7 +18,6 @@
         </div>
     </div>
 
-    <MainFooter id="contacts" />
 
 </template>
 

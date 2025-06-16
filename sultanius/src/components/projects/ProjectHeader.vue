@@ -16,10 +16,10 @@
                             <li>
                                 <a href="/">ГЛАВНАЯ</a>
                             </li>
-                            <li @click="navigateTo('/')">ОБО МНЕ</li>
+                            <li @click="navigateTo('/about-self')">ОБО МНЕ</li>
                             <li @click="navigateTo('/projects')">ПРОЕКТЫ</li>
                             <li @click="navigateTo('/')">СТОИМОСТЬ</li>
-                            <li @click="navigateTo('/')">КОНТАКТЫ</li>
+                            <li @click="navigateTo('/contacts')">КОНТАКТЫ</li>
                         </ul>
                     </div>
 
@@ -31,11 +31,11 @@
             </div>
         </div>
 
-        <div>
+        <div class="hide-on-mobile">
             <PereDesignBlack  />
         </div>
 
-        <FillBtn> Написать нам </FillBtn>
+        <FillBtn class="hide-on-mobile"> Написать нам </FillBtn>
     </div>
 </template>
 
@@ -45,6 +45,11 @@ import FillBtn from '../../components/ui/FillBtn.vue'
 import PereDesign from '../icons/PereDesign.vue'
 import PereDesignBlack from '../icons/PereDesignBlack.vue'
 
+import { useNavigate } from '@/composables/useNavigate.js'
+
+const { navigateTo } = useNavigate()
+
+
 </script>
 
 <style scoped>
@@ -53,8 +58,7 @@ import PereDesignBlack from '../icons/PereDesignBlack.vue'
     justify-content: space-between;
     max-width: 1520px;
     margin: 0 auto;
-    padding-bottom: 48px;
-    padding-top: 48px;
+    padding: 48px 16px;
     color: white;
 }
 

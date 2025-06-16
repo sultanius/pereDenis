@@ -1,6 +1,4 @@
 <template>
-    <ProjectHeader />
-
 
     <div  class="container">
         <div>наш опыт</div>

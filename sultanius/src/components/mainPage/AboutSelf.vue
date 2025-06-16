@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="about-self-container">
         <div style="margin: 0 auto">
             <img src="../../assets/imgs/mainPage/pereDen.jpg" >
         </div>
@@ -52,7 +52,7 @@ p {
     line-height: 100%;
 }
 
-.container{
+.about-self-container{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 10px; /* Отступы между колонками */
