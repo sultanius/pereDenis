@@ -1,6 +1,6 @@
 <template>
     <path>
-        <svg width="186" height="59" viewBox="0 0 186 59" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg :width="width || '186'" :height="height || '59'"  viewBox="0 0 186 59" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <mask id="mask0_70_303" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="186" height="59">
                 <rect x="0.242188" y="0.75" width="185.357" height="58" fill="url(#pattern0_70_303)"/>
             </mask>
@@ -16,3 +16,11 @@
         </svg>
     </path>
 </template>
+
+<script setup>
+const props = defineProps({
+    width: [String, Number],
+    height: [String, Number],
+})
+
+</script>

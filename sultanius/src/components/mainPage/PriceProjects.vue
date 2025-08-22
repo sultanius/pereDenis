@@ -2,7 +2,7 @@
     <div>
         <h1>СТОИМОСТЬ ПРОЕКТА</h1>
 
-        <div class="container">
+        <div class="price-projects-container">
             <div class="container-image">
                 <img class="image" src="../../assets/imgs/priceProject/archProject.png">
 
@@ -88,7 +88,7 @@ h1{
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20.19%, rgba(0, 0, 0, 0.85) 100%);
 }
 
-.container{
+.price-projects-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 24px;
@@ -125,12 +125,48 @@ h1{
     color: white; /* Цвет текста */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
+
 bottom-text, .bottom-text__item-one {
     font-size: 26px;
+    line-height: 100%;
 }
 
 bottom-text, .bottom-text__item-two {
     font-size: 50px;
     font-weight: 600;
+    line-height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .price-projects-container {
+        padding: 16px;
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: left;
+        padding-left: 16px;
+    }
+
+    .bottom-text {
+        left: 32px;
+        bottom: 42px; /* Расположите кнопку на 10px от верхней части */
+    }
+
+    bottom-text, .bottom-text__item-one {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    bottom-text, .bottom-text__item-two {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+
 }
 </style>

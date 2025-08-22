@@ -2,22 +2,22 @@
     <div class="main-stats-container">
         <div class="test">
             <h1 id="count1">26+</h1>
-            <p>Домов спроектировано</p>
+            <p>Домов <br class="hide-on-dekstop"/> спроектировано</p>
         </div>
 
         <div class="test">
             <h1 id="count2">11+</h1>
-            <p>На стадии реализации</p>
+            <p>На стадии <br class="hide-on-dekstop"/>реализации</p>
         </div>
 
         <div class="test">
             <h1 id="count3">5+</h1>
-            <p>Завершенных проектов</p>
+            <p>Завершенных <br class="hide-on-dekstop"/>проектов</p>
         </div>
 
         <div class="test">
             <h1 id="count4">3</h1>
-            <p>Месяца срок проекта</p>
+            <p>Месяца срок<br class="hide-on-dekstop"/> проекта</p>
         </div>
     </div>
 </template>
@@ -75,7 +75,26 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    max-width: 1520px;
+    margin: 80px auto;
+}
+@media (max-width: 768px) {
+
+    .main-stats-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 64px;
+        margin-bottom: 0px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
 }
 </style>

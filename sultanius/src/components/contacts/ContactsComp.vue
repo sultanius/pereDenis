@@ -8,9 +8,6 @@
                 В ЛЮБОЙ ТОЧКЕ МИРА
             </h1>
 
-            <p style="font-size: 24px">
-                Съешь еще этих мягких французских булок
-            </p>
             <div class="contacts-comp-box-info">
                 <div class="left" >
                     <div>
@@ -23,7 +20,6 @@
                 <div class="right">
                     <p style="font-weight: 400">Санкт-Петербург,</p>
                     <p>Россия</p>
-                    <p>Съешь еще этих мягких французских булок</p>
                 </div>
             </div>
 

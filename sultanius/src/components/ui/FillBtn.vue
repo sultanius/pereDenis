@@ -10,6 +10,7 @@
     color: black; /* Цвет текста черный */
     text-align: center;
     font-size: 22px;
+    line-height: 100%;
     padding: 20px;
     position: relative; /* Для позиционирования псевдоэлемента */
     overflow: hidden;  /* Скрыть переполнение при наведении */
@@ -48,5 +49,17 @@
 .button span {
     position: relative; /* Позволяет тексту слегка выступать над псевдоэлементом */
     z-index: 1; /* Помещаем текст над фоновым слоем */
+}
+
+@media (max-width: 768px) {
+
+    .button {
+        padding: 12px 24px;
+        font-size: 14px;
+        border-radius: 1px;
+    }
+
+
+
 }
 </style>

@@ -2,27 +2,27 @@
     <ProjectHeader />
 
     <div class="container container-project-info">
-        <div style="color: #656565">(фотографии проекта)</div>
+        <div style="color: #656565"></div>
         <div>
-            <h1>КП РЕПИНО ПАРК</h1>
+            <h1>{{currentProjects.name}}</h1>
         </div>
-        <div>
+        <div class="hide-on-mobile">
             <img :src="projectMainImageMap[route.params.name][0]">
         </div>
-        <div>
+        <div class="info-row-block">
             <div class="info-row-item">
                 <p class="bold-p">Год</p>
-                <p>2024</p>
+                <p>{{currentProjects.year}}</p>
             </div>
 
             <div class="info-row-item">
                 <p class="bold-p">Стадия</p>
-                <p>Строительство</p>
+                <p>{{currentProjects.stageProcess}}</p>
             </div>
 
             <div class="info-row-item">
                 <p class="bold-p">Площадь</p>
-                <p>480м2</p>
+                <p>{{currentProjects.square}}</p>
             </div>
 
             <div class="info-row-item">
@@ -36,6 +36,9 @@
 
     <div class="container">
         <div class="image-container">
+            <div class="hide-on-dekstop">
+                <img :src="projectMainImageMap[route.params.name][0]">
+            </div>
             <div v-for="(image, index) in projectImageMap[route.params.name]" :key="index" :class="['image-item', image.widthClass]">
                 <img v-if="image.url"  :src="image.url" loading="lazy">
             </div>
@@ -51,9 +54,16 @@ import { useRoute } from 'vue-router'
 
 import ProjectHeader from './ProjectHeader.vue'
 import MainFooter from '../mainPage/MainFooter.vue'
+import { projectPreviews } from '../../constants/index.js'
+import { computed } from 'vue'
 
 const route = useRoute();
 console.log(3, route.params.name);
+
+const currentProjects = computed(() => {
+    const project = projectPreviews.find((p) => p.pathUrl === route.params.name);
+    return project;
+})
 
 const projectMainImageMap = {
     'kp-repino-park-1': [
@@ -831,21 +841,55 @@ img{
     grid-gap: 24px;
 }
 
+.info-row-block {
+}
+
 .info-row-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid #BFBFBF;
     font-size: 20px;
     padding: 24px 0;
-    color: #383838;
+    color: #000000;
 }
 .bold-p {
     font-size: 24px;
     font-weight: 500;
-    margin-right: 120px;
-    min-width: 150px;
+    /*margin-right: 120px;*/
+    /*min-width: 150px;*/
 }
 p {
     /*border: 1px solid black;*/
+    font-size: 20px;
 }
 
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .w-100 {
+        flex: 0 0 100%;
+    }
+
+    .w-50 {
+        flex: 0 0 100%;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    .container-project-info {
+        padding: 16px;
+        display: block;
+    }
+
+    .info-row-item {
+        padding: 0 0 12px 0;
+        font-size: 16px;
+    }
+
+}
 </style>

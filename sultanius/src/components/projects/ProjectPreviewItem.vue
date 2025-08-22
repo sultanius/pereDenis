@@ -88,6 +88,7 @@ img {
 .top-left {
     top: 24px;
     left: 24px;
+    font-size: 10px;
 }
 
 .middle-text {
@@ -112,7 +113,30 @@ img {
 .bottom-right {
     bottom: 24px;
     right: 24px;
-    padding: 12px 24px;
+    height: 36px;
+    width: 98px;
     border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        opacity: 100%;
+    }
+
+    .middle-text {
+        font-size: 30px;
+    }
+
+    .bottom-left {
+        font-size: 10px;
+    }
+
+    .bottom-right {
+        font-size: 16px;
+    }
+
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <img class="image" src="../../assets/imgs/mainPage/mainFirstImg.png" >
+        <video poster="../../assets/imgs/mainPage/mainFIrstImgMobile.png" video autoplay loop muted playsinline id="myVideo">
+            <source  src="../../assets/mainVideo.mp4" type="video/mp4">
+        </video>
 
         <div class="left-top-text" >
             <div class="menu">
@@ -16,7 +18,7 @@
                             <li @click="navigateTo('/')">
                                 <a href="/">ГЛАВНАЯ</a>
                             </li>
-                            <li >
+                            <li @click="navigateTo('/about-self')">
                                 <a>ОБО МНЕ</a>
                             </li>
                             <li @click="navigateTo('/projects')">ПРОЕКТЫ</li>

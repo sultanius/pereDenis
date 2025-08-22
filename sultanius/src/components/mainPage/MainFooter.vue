@@ -4,13 +4,13 @@
             <div class="main-footer-container-grid__one grid-block--bottom" >
                 <h1 class="hide-on-dekstop">КОНТАКТЫ</h1>
 
-                <PereDesign style="margin-bottom: 24px;"/>
+                <PereDesign class="main-footer-pere-icon" style="margin-bottom: 24px;"/>
 
-                <p style="margin-bottom: 12px" >
+                <p class="main-footer-telephone">
                     +7 (999) 555-33-22
                 </p>
 
-                <p style="margin-bottom: 60px">
+                <p class="main-footer-email">
                     info@pere.design
                 </p>
 
@@ -36,7 +36,7 @@
 <!--                        <input class="custom-input" type="checkbox" id="checkbox" placeholder="Доп.информация" required name="input" v-model="form.comment" />-->
 <!--                        <label for="checkbox">Я даю согласие на обработку персональных данных</label>-->
 <!--                    </div>-->
-                    <FillBtn style="width: 100%; border: 1px solid white; display: block; text-align: center">Отправить</FillBtn>
+                    <FillBtn class="main-footer-btn-submit">ОТПРАВИТЬ</FillBtn>
                 </form>
 
             </div>
@@ -107,11 +107,36 @@ p{
     padding-top: 200px;
 }
 
+.main-footer-btn-submit {
+    /*style="width: 100%; border: 1px solid white; display: block; text-align: center"*/
+    border: 1px solid white;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.main-footer-telephone {
+    margin-bottom: 12px;
+}
+.main-footer-email {
+    margin-bottom: 60px;
+}
+.main-footer-pere-icon {
+    margin-bottom: 24px;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 24px;
     }
 
+    .main-footer-container {
+        margin-top: 0;
+        padding-top: 24px;
+    }
     .main-footer-container-grid {
         grid-template-columns: 1fr;
         padding: 16px;
@@ -130,6 +155,18 @@ p{
     .main-footer-container-grid__one {
         padding-top: 30px;
     }
+
+
+    .main-footer-pere-icon {
+        margin-left: -10px;
+    }
+    .main-footer-telephone {
+        margin-bottom: 12px;
+    }
+    .main-footer-email {
+        margin-bottom: 24px;
+    }
+
 }
 
 /* Сбрасываем все стили */
