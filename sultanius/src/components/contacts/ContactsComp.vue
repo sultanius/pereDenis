@@ -125,7 +125,7 @@ h1{
     .contacts-comp-container {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 16px;
+        padding: 0 16px 16px;
     }
 
     .contacts-comp-box-info{

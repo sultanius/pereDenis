@@ -22,7 +22,7 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 700 руб\м2
+                        от 3000 руб\м2
                     </div>
 
                     <div class="bottom-text__item-two">
@@ -36,7 +36,7 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 800 руб\м2
+                        от 450 руб\м2
                     </div>
 
                     <div class="bottom-text__item-two">
@@ -50,7 +50,7 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 4000 руб\м2
+                        от 400 руб\м2
                     </div>
 
                     <div class="bottom-text__item-two">
@@ -64,7 +64,7 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 30 000 руб\м2
+                        от 30 000 руб\месяц
                     </div>
 
                     <div class="bottom-text__item-two">

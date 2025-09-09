@@ -3,11 +3,11 @@
     <div  class="propject-comp-container">
         <div></div>
         <div>
-            <h1>РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h1>
+            <h1>ПРОЕКТЫ</h1>
 
-            <p>Каждый проект, который мы реализуем, отражает нашу философию минимализма и стремление к идеальному балансу между стилем и функциональностью</p>
-            <p>Мы гордимся тем, что наши дома становятся не просто архитектурными сооружениями, а пространствами для жизни, наполненными комфортом и светом</p>
-            <p>В этом разделе представлены некоторые из наших самых успешных проектов, которые подчеркивают наш подход к индивидуальности и вниманию к деталям</p>
+            <p>Каждый проект, который я реализую, отражает нашу философию минимализма и стремление к идеальному балансу между стилем и функциональностью</p>
+            <p>Я горжусь тем, что мои дома становятся не просто архитектурными сооружениями, а пространствами для жизни, наполненными комфортом и светом</p>
+            <p>В этом разделе представлены некоторые из моих самых успешных проектов, которые подчеркивают наш подход к индивидуальности и вниманию к деталям</p>
         </div>
 
         <div class="toggle-buttons">
@@ -37,7 +37,7 @@
     </div>
 
     <div class="preview-container">
-        <ProjectPreviewItem  v-for="(item, i) in projectPreviews" :image="item.image" :item="item" :key="item" @click="goToProject(item.pathUrl)"/>
+        <ProjectPreviewItem  v-for="(item, i) in projects" :image="item.image" :item="item" :key="item" @click="goToProject(item.pathUrl)"/>
     </div>
 
 </template>
@@ -47,16 +47,38 @@ import FillBtn from '../../components/ui/FillBtn.vue'
 import ProjectHeader from './ProjectHeader.vue'
 import ProjectPreviewItem from './ProjectPreviewItem.vue'
 import { useRouter } from 'vue-router'
-import { projectPreviews } from '../../constants/index.js'
+import { projectPreviews, TYPE_PROJECT } from '../../constants/index.js'
 
 const router = useRouter();
 
 const goToProject = (pathUrl) => {
-    // router.push(`/projects/${pathUrl}`)
     router.push({ path: `/projects/${pathUrl}`, params: { str: '123' }})
 }
 
+
+import { computed , ref } from 'vue'
+
+const typeProject = ref(0);
+const projects = computed(() => {
+    switch (typeProject.value) {
+        case 0:
+            return projectPreviews;
+        case 1:
+            return projectPreviews.filter(project => {
+                return project.type === TYPE_PROJECT.house;
+            });
+        case 2:
+            return projectPreviews.filter(project => {
+                return project.type === TYPE_PROJECT.interior;
+            });
+        default:
+            return projectPreviews;
+    }
+})
+
 const setActive = (index) => {
+    typeProject.value = index;
+
     // Получаем все кнопки
     const buttons = document.querySelectorAll('.toggle-button');
 
@@ -203,7 +225,7 @@ p{
 @media (max-width: 768px) {
     .propject-comp-container {
         grid-template-columns: 1fr;
-        padding: 16px;
+        padding: 0 16px 16px;
         gap: 12px;
     }
 

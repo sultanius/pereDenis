@@ -1,5 +1,5 @@
 <template>
-    <ProjectHeader />
+<!--    <ProjectHeader />-->
 
     <div class="container container-project-info">
         <div style="color: #656565"></div>
@@ -39,14 +39,13 @@
             <div class="hide-on-dekstop">
                 <img :src="projectMainImageMap[route.params.name][0]">
             </div>
-            <div v-for="(image, index) in projectImageMap[route.params.name]" :key="index" :class="['image-item', image.widthClass]">
+            <div v-for="(image, index) in projectImageMapComputed" :key="index" :class="['image-item', image.widthClass]">
                 <img v-if="image.url"  :src="image.url" loading="lazy">
             </div>
         </div>
     </div>
 
-    <MainFooter />
-
+<!--    <MainFooter />-->
 </template>
 
 <script setup>
@@ -58,11 +57,27 @@ import { projectPreviews } from '../../constants/index.js'
 import { computed } from 'vue'
 
 const route = useRoute();
-console.log(3, route.params.name);
+
 
 const currentProjects = computed(() => {
     const project = projectPreviews.find((p) => p.pathUrl === route.params.name);
     return project;
+})
+
+
+
+
+import { useWindowSize } from '../../composables/useWindowSize';
+const { isDesktop } = useWindowSize();
+
+const projectImageMapComputed = computed(() => {
+    if (isDesktop.value) {
+        return projectImageMap[route.params.name];
+    } else {
+        const t = projectImageMap[route.params.name].filter((el) => el.url);
+        console.log(5, t)
+        return t;
+    }
 })
 
 const projectMainImageMap = {

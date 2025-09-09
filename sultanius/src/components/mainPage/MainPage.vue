@@ -4,16 +4,16 @@
 
     <div class="main-page-container">
 
-        <AboutSelf v-if="isDesktop" id="about-me" />
-        <AboutSelfMobile v-else  />
+        <AboutSelf id="about-me" />
+<!--        <AboutSelfMobile v-else  />-->
 
-<!--        <MainStats />-->
+<!--        <MainStats v-if="!isDesktop" />-->
 
         <PriceProjects id="price-project" />
 
-        <div class="main-page-price-btn">
-            <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" > СТОИМОСТЬ </FillBtn>
-        </div>
+<!--        <div class="main-page-price-btn">-->
+<!--            <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" > СТОИМОСТЬ </FillBtn>-->
+<!--        </div>-->
     </div>
 
 
@@ -28,10 +28,11 @@ import AboutSelf from './AboutSelf.vue';
 import AboutSelfMobile from './AboutSelfMobile.vue';
 import PriceProjects from './PriceProjects.vue';
 import MainFooter from './MainFooter.vue';
+import MainStats from './MainStats.vue';
 import FillBtn from '../../components/ui/FillBtn.vue'
 
-import { useWindowSize } from '../../composables/useWindowSize'
-const { isDesktop, height } = useWindowSize()
+import { useWindowSize } from '../../composables/useWindowSize';
+const { isDesktop, height } = useWindowSize();
 
 
 </script>

@@ -14,7 +14,7 @@
         </div>
 
 
-        <WhiteTransparentBtn style="margin-bottom: 48px"> НАПИСАТЬ НАМ </WhiteTransparentBtn>
+        <WhiteTransparentBtn style="margin-bottom: 48px"> НАПИСАТЬ МНЕ </WhiteTransparentBtn>
 
         <div class="menu-content">
             <nav>
@@ -95,8 +95,8 @@ li,p {
     align-items: center;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     color: white;
     z-index: 1000; /* Чтобы меню было поверх других элементов */

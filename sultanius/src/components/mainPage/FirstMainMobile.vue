@@ -3,6 +3,7 @@
         <video poster="../../assets/imgs/mainPage/mainFIrstImgMobile.png" video autoplay loop muted playsinline id="myVideo">
             <source  src="../../assets/mainVideo.mp4" type="video/mp4">
         </video>
+
         <div class="first-main-mobile__btn-navigation" @click="toggleMenu">
             <div class="first-main-mobile__btn-navigation__line"></div>
             <div class="first-main-mobile__btn-navigation__line"></div>
@@ -36,6 +37,13 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* обрежет видео, сохраняя пропорции */
+    object-position: center; /* или left, right для выбора части видео */
+}
+
 p{
     font-size: 40px;
     color: white;
@@ -44,12 +52,17 @@ p{
     font-weight: 600;
 }
 .first-main-mobile-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
 }
 
 .first-main-mobile__btn-navigation {
     z-index: 1;
     position: absolute;
-    top: 80px;
+    top: 30px;
     left: 16px;
     width: 56px;
     height: 40px;
@@ -72,7 +85,7 @@ p{
 .first-main-mobile__bottom-left {
     z-index: 1;
     position: absolute;
-    bottom: 80px;
+    bottom: 50px;
     left: 16px;
 }
 

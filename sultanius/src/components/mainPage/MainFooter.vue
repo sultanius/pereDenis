@@ -7,11 +7,11 @@
                 <PereDesign class="main-footer-pere-icon" style="margin-bottom: 24px;"/>
 
                 <p class="main-footer-telephone">
-                    +7 (999) 555-33-22
+                    +7 (921) 443 23 10
                 </p>
 
                 <p class="main-footer-email">
-                    info@pere.design
+                    hello.pere.design@mail.ru
                 </p>
 
                 <div style="font-size: 15px;">

@@ -11,7 +11,7 @@
             <PereDesignBlack  />
         </div>
 
-        <FillBtn class="hide-on-mobile"> Написать нам </FillBtn>
+        <FillBtn class="hide-on-mobile"> Написать мне </FillBtn>
     </div>
 
     <MobileMenuNavigation :menuOpen="menuActive" @close="menuActive = false"/>
@@ -73,5 +73,10 @@ const toggleMenu = () => {
     background-color: black;
 }
 
+@media (max-width: 768px) {
+    .header-projects{
+        padding: 32px 16px;
+    }
+}
 
 </style>

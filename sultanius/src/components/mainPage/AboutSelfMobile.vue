@@ -48,4 +48,10 @@ p {
     font-size: 16px;
     margin-bottom: 12px;
 }
+
+@media (max-width: 768px) {
+    .about-self-mobile-title {
+        /*margin-top: 40px;*/
+    }
+}
 </style>

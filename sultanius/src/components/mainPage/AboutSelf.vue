@@ -29,6 +29,7 @@
     </div>
 
     <AboutSelfMobile v-else/>
+
     <MainStats />
 
     <div class="main-page-projects-btn" >
@@ -268,6 +269,10 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .main-page-projects-btn {
+        margin-bottom: 32px;
     }
 
     .about-self-additional-grid-item-text-mobile {
