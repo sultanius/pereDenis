@@ -11,6 +11,8 @@
 
         <PriceProjects id="price-project" />
 
+        <CalcPrice  />
+
 <!--        <div class="main-page-price-btn">-->
 <!--            <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" > СТОИМОСТЬ </FillBtn>-->
 <!--        </div>-->
@@ -27,9 +29,7 @@ import FirstMainMobile from './FirstMainMobile.vue';
 import AboutSelf from './AboutSelf.vue';
 import AboutSelfMobile from './AboutSelfMobile.vue';
 import PriceProjects from './PriceProjects.vue';
-import MainFooter from './MainFooter.vue';
-import MainStats from './MainStats.vue';
-import FillBtn from '../../components/ui/FillBtn.vue'
+import CalcPrice from './CalcPrice.vue';
 
 import { useWindowSize } from '../../composables/useWindowSize';
 const { isDesktop, height } = useWindowSize();
