@@ -33,7 +33,7 @@
     <MainStats />
 
     <div class="main-page-projects-btn" >
-        <FillBtn style="margin: 0 auto; width: 400px; text-align: center;"> ПРОЕКТЫ </FillBtn>
+        <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" @click="navigateTo('/projects')"> ПРОЕКТЫ </FillBtn>
     </div>
 
     <div v-if="router.currentRoute.value.fullPath !== '/' && isDesktop" class="about-self-additional-container">
@@ -149,9 +149,13 @@ import FillBtn from '../../components/ui/FillBtn.vue'
 
 import { useWindowSize } from '@/composables/useWindowSize.js'
 import { useRouter } from 'vue-router'
+import { useNavigate } from '@/composables/useNavigate.js'
 
 const router = useRouter();
 const { isDesktop, height } = useWindowSize()
+
+const { navigateTo } = useNavigate()
+
 
 </script>
 

@@ -31,7 +31,7 @@ import AboutSelfMobile from './AboutSelfMobile.vue';
 import PriceProjects from './PriceProjects.vue';
 import CalcPrice from './CalcPrice.vue';
 
-import { useWindowSize } from '../../composables/useWindowSize';
+import { useWindowSize } from '@/composables/useWindowSize.js';
 const { isDesktop, height } = useWindowSize();
 
 

@@ -27,7 +27,7 @@ const router = useRouter();
         <RouterView />
     </main>
 
-    <MainFooter id="contacts" />
+    <MainFooter id="MainFooter" />
 </template>
 
 <style >
@@ -52,6 +52,7 @@ const router = useRouter();
     font-weight: 500; /* Medium обычно это 500 */
     font-style: normal;
     font-display: swap;
+    unicode-range: U+0020-007F, U+0400-04FF;
 }
 
 @font-face {
@@ -96,39 +97,5 @@ html, body {
 }
 html:focus-within {
     scroll-behavior: smooth;
-}
-.hamburger-lines {
-    display: block;
-    height: 26px;
-    width: 32px;
-    position: absolute;
-    top: -10px;
-    right: 16px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #0e2431;
-}
-
-.hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-}
-
-.hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
 }
 </style>

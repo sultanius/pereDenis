@@ -2,7 +2,7 @@
     <div class="full-screen-menu" :class="{ active: menuOpen }">
 
         <div class="mobile-menu__header" >
-            <PereDesign :width="132" :height="41"/>
+            <PereDesign style="fill: none; color: none; z-index: 1111111" :width="132" :height="41"/>
 
 
 <!--            иконка крестика-->
@@ -14,7 +14,7 @@
         </div>
 
 
-        <WhiteTransparentBtn style="margin-bottom: 48px"> НАПИСАТЬ МНЕ </WhiteTransparentBtn>
+        <WhiteTransparentBtn style="margin-bottom: 48px" @click="goToFooter"> НАПИСАТЬ МНЕ </WhiteTransparentBtn>
 
         <div class="menu-content">
             <nav>
@@ -22,7 +22,7 @@
                     <li @click="goToPage('/')">ГЛАВНАЯ</li>
                     <li @click="goToPage('/about-self')">ОБО МНЕ</li>
                     <li @click="goToPage('/projects')">ПРОЕКТЫ</li>
-                    <li @click="goToPage('/')">СТОИМОСТЬ</li>
+                    <li @click="goToPricePage">СТОИМОСТЬ</li>
                     <li @click="goToPage('/contacts')">КОНТАКТЫ</li>
                 </ul>
             </nav>
@@ -57,8 +57,9 @@
 import { defineEmits } from 'vue';
 
 import WhiteTransparentBtn from '../../components/ui/WhiteTransparentBtn.vue'
-import PereDesign from '../icons/PereDesign.vue'
+import PereDesign from '@/components/icons/PereDesign.vue'
 import { useNavigate } from '@/composables/useNavigate.js'
+import { navigateToPrice, goToMainFooter } from '@/composables/helper.js'
 
 
 const props = defineProps({
@@ -78,6 +79,17 @@ const toggleMenu = () => {
 const goToPage = (to) => {
     navigateTo(to);
     toggleMenu();
+}
+
+const goToPricePage = () => {
+    navigateTo('/');
+    toggleMenu();
+    navigateToPrice();
+}
+
+const goToFooter = () => {
+    toggleMenu();
+    goToMainFooter();
 }
 
 </script>
@@ -100,7 +112,8 @@ li,p {
     background-color: black;
     color: white;
     z-index: 1000; /* Чтобы меню было поверх других элементов */
-    padding: 16px;
+    padding: 16px 32px 16px 16px;
+    box-sizing: border-box;
 }
 
 .full-screen-menu.active {

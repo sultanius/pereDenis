@@ -67,14 +67,17 @@
         </div>
 
         <!-- Итоговая стоимость -->
-        <div class="total-cost">
-            <h2>Общая стоимость: {{ totalCost.toLocaleString() }} руб</h2>
+        <div class="total-cost" @click="goToPage">
+            <h2>УЗНАТЬ СТОИМОСТЬ <span style="font-family: Involve">?</span> </h2>
+<!--            <h2>Общая стоимость: {{ totalCost.toLocaleString() }} руб</h2>-->
         </div>
     </div>
 </template>
 
-<script>
+<script >
 import FillBtn from '../../components/ui/FillBtn.vue'
+import { useNavigate } from '@/composables/useNavigate.js'
+import { goToMainFooter } from '@/composables/helper.js'
 
 export default {
     components: {
@@ -88,14 +91,14 @@ export default {
             selectedInterior: [],
             totalCost: 0,
             architectureOptions: [
-                { id: 1, name: 'Эскизный проект', price: 1800 },
-                { id: 2, name: 'Рабочий проект АР', price: 1111 },
-                { id: 3, name: 'Конструктивный раздел КЖ', price: 111 },
-                { id: 4, name: 'Инженерия ВК и ОВ', price: 1111 },
+                { id: 1, name: 'Эскизный проект', price: 2000 },
+                { id: 2, name: 'Рабочий проект АР', price: 1500 },
+                { id: 3, name: 'Конструктивный раздел КЖ', price: 400 },
+                { id: 4, name: 'Инженерия ВК и ОВ', price: 400 },
             ],
             interiorOptions: [
-                { id: 1, name: 'Эскизный проект', price: 1800 },
-                { id: 2, name: 'Рабочий проект РП', price: 1111 },
+                { id: 1, name: 'Эскизный проект', price: 2000 },
+                { id: 2, name: 'Рабочий проект РП', price: 1500 },
             ]
         }
     },
@@ -124,6 +127,10 @@ export default {
             }
 
             this.totalCost = pricePerSqm * this.area;
+        },
+
+        goToPage() {
+            goToMainFooter();
         }
     },
     mounted() {
@@ -163,7 +170,7 @@ export default {
 }
 
 .calc-type-btn:hover {
-    border-color: rgba(44, 21, 21, 0.99);;
+    border-color: rgba(44, 21, 21, 0.99);
 }
 
 .calc-options {
@@ -197,8 +204,19 @@ export default {
 }
 
 .calc-price-points-box input[type="checkbox"] {
+    appearance: none;
     width: 18px;
     height: 18px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calc-price-points-box input[type="checkbox"]:checked {
+    background: #1A1A1A;
+    border-color: #1A1A1A;
 }
 
 .area-slider {
@@ -216,11 +234,31 @@ export default {
 
 .area-slider input[type="range"] {
     width: 100%;
-    height: 6px;
-    border-radius: 3px;
+    height: 2px;
+    border-radius: 1px;
     background: #ddd;
     outline: none;
     margin: 10px 0;
+    appearance: none;
+    cursor: pointer;
+}
+
+.area-slider input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 12px;
+    background: #1A1A1A;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.area-slider input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 12px;
+    background: #1A1A1A;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
 
 .slider-values {
@@ -236,6 +274,7 @@ export default {
     background: #1A1A1A;
     border-radius: 8px;
     border: 2px solid rgba(26, 26, 26, 0.89);
+    cursor: pointer;
 }
 
 .total-cost h2 {

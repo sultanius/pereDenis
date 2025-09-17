@@ -1,6 +1,16 @@
 <template>
     <div class="first-main-mobile-container">
-        <video poster="../../assets/imgs/mainPage/mainFIrstImgMobile.png" video autoplay loop muted playsinline id="myVideo">
+        <video
+            poster="../../assets/imgs/mainPage/mainFIrstImgMobile.png"
+            video
+            autoplay
+            loop
+            muted
+            playsinline
+            id="myVideo"
+            preload="metadata"
+            webkit-playsinline="true"
+        >
             <source  src="../../assets/mainVideo.mp4" type="video/mp4">
         </video>
 

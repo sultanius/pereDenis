@@ -15,14 +15,14 @@
                 </p>
 
                 <div style="font-size: 15px;">
-                    © 2025 | ООО "Pere.Design" |
+                    © 2025 |  "Pere.Design" |
                     <br class="hide-on-dekstop">
                     Политика конфиденциальности
                 </div>
             </div>
 
             <div class="grid-block--top">
-                <h1>ОБСУДИМ ПРОЕКТ? </h1>
+                <h1>ОБСУДИМ ПРОЕКТ <span style="font-family: Involve">?</span> </h1>
 
                 <form>
                     <div class="form-inputs">
@@ -36,7 +36,7 @@
 <!--                        <input class="custom-input" type="checkbox" id="checkbox" placeholder="Доп.информация" required name="input" v-model="form.comment" />-->
 <!--                        <label for="checkbox">Я даю согласие на обработку персональных данных</label>-->
 <!--                    </div>-->
-                    <FillBtn class="main-footer-btn-submit">ОТПРАВИТЬ</FillBtn>
+                    <FillBtn class="main-footer-btn-submit" @click="onSubmit">ОТПРАВИТЬ</FillBtn>
                 </form>
 
             </div>
@@ -61,10 +61,34 @@ export default {
             phone: '',
             comment: '',
         });
+        const BOT_TOKEN = '7594388162:AAFXn-Nf0DfZVUgU9jNHdDfU0wcfuxMfKZ0';
+        const CHAT_ID = 'pere_design_bot';
+
+        const onSubmit = async () => {
+
+            // const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/getUpdates`);
+            // const data = await response.json();
+            // console.log(444, data);
+
+            try {
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: 1056416114,
+                        text: `Привет меня зовут ${form.name}, моя контактная информация; Телефон: ${form.phone}, Почта: ${form.email}, Доп.инфа: ${form.comment},`
+                    })
+                })
+                alert('Сообщение отправлено!')
+            } catch (error) {
+                alert('Ошибка отправки')
+            }
+        }
 
 
         return {
             form,
+            onSubmit,
         };
     }
 };

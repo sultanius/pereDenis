@@ -22,7 +22,7 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 3000 руб\м2
+                        от 2000 руб\м2
                     </div>
 
                     <div class="bottom-text__item-two">
