@@ -7,7 +7,7 @@
             loop
             muted
             playsinline
-            id="myVideoMobile"
+            id="myVideo"
             webkit-playsinline="true"
         >
             <source  src="../../assets/mainVideo.mp4" type="video/mp4">

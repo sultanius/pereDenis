@@ -64,7 +64,7 @@
 
 <script>
 import PereDesign from '../icons/PereDesign.vue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 export default {
@@ -166,7 +166,7 @@ nav {
 }
 .burger {
     position: relative;
-    z-index: 1;
+    z-index: 4;
     cursor: pointer;
     display: block;
     position: relative;
@@ -224,9 +224,9 @@ li:hover{
 .menu-list {
     font-size: 20px;
     border: 1px solid black;
-    top: -85px;
+    top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     background-color: #000000;
     height: 100vh;
     display: flex;
@@ -236,10 +236,11 @@ li:hover{
     text-align: center;
     /*gap: 12px;*/
     /*margin: 0;*/
-    transform: translateX(-200%);
+    transform: translateX(-100%);
     transition: .7s;
-    width: 280px;
+    width: clamp(260px, 22vw, 320px);
     padding: 35px 0 55px;
+    z-index: 3;
 
     /*display: flex; !* Можно использовать Flexbox для расположения элементов *!*/
     /*justify-content: center; !* Выравниваем по центру по горизонтали *!*/
@@ -249,7 +250,7 @@ li:hover{
 }
 
 .burger-checkbox:checked ~ .menu-list {
-    transform: translateX(-200px);
+    transform: translateX(0);
 }
 
 </style>

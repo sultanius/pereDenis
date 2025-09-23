@@ -7,27 +7,42 @@ import MainFooter from './components/mainPage/MainFooter.vue';
 import ProjectComp from './components/projects/ProjectComp.vue';
 import ProjectHeader from './components/projects/ProjectHeader.vue'
 
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const test = ref('asdasdasdasd');
 const router = useRouter();
 
+onMounted(() => {
+            const video = document.getElementById('myVideo');
+            if (video && video instanceof HTMLVideoElement) {
+                video.muted = true; // iOS требует mute для автозапуска
+                // @ts-ignore
+                video.playsInline = true; // iOS Safari inline
+                const tryPlay = () => {
+                    // Попытка воспроизведения без пользовательского жеста (muted)
+                    video.play().catch(() => {});
+                };
+                video.addEventListener('canplay', tryPlay, { once: true });
+                tryPlay();
+            }
+        });
+
+
 </script>
 
 <template>
-
-   <ProjectHeader v-if="router.currentRoute.value.fullPath !== '/'"/>
-<!---->
+  <div>
+    <ProjectHeader v-if="router.currentRoute.value.fullPath !== '/'"/>
     <nav>
-<!--        <RouterLink to="/">Go to Home</RouterLink>-->
-<!--        <RouterLink to="/projects">Go to projects</RouterLink>-->
+      <!--        <RouterLink to="/">Go to Home</RouterLink>-->
+      <!--        <RouterLink to="/projects">Go to projects</RouterLink>-->
     </nav>
-    <main>
-        <RouterView />
+    <main :class="{ 'page-container': router.currentRoute.value.fullPath !== '/' }">
+      <RouterView />
     </main>
-
     <MainFooter id="MainFooter" />
+  </div>
 </template>
 
 <style >
@@ -123,5 +138,19 @@ html, body {
 }
 html:focus-within {
     scroll-behavior: smooth;
+}
+
+/* Контейнер для десктопных внутренних страниц */
+.page-container {
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(16px, 5vw, 64px);
+    padding-right: clamp(16px, 5vw, 64px);
+}
+
+/* Безопасное перенесение длинных слов/ссылок, чтобы текст не вылезал из блоков */
+main, section, article, p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: anywhere;
 }
 </style>
