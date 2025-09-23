@@ -57,35 +57,61 @@ const router = useRouter();
 
 @font-face {
     font-family: 'Involve';
-    src: url('./fonts/Involve/Involve-Medium.ttf') format('truetype');
+    src: url('./fonts/Involve/Involve-Regular.ttf') format('truetype');
     font-weight: 500; /* Medium обычно это 500 */
     font-style: normal;
     font-display: swap;
 }
 
-/*@font-face {*/
-/*    font-family: 'Involve';*/
-/*    src: url('./fonts/Involve/Involve-MediumOblique.ttf') format('truetype');*/
-/*    font-weight: 500;*/
-/*    font-style: oblique; !* или italic, если в названии italic *!*/
-/*    font-display: swap;*/
-/*}*/
+@font-face {
+    font-family: 'Involve';
+    src: url('./fonts/Involve/Involve-MediumOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: oblique; /* или italic, если в названии italic */
+    font-display: swap;
+}
 
-/*@font-face {*/
-/*    font-family: 'Involve';*/
-/*    src: url('./fonts/Involve/Involve-SemiBold.ttf') format('truetype');*/
-/*    font-weight: 600; !* SemiBold *!*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
+@font-face {
+    font-family: 'Involve';
+    src: url('./fonts/Involve/Involve-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
+    font-display: swap;
+}
 
-/*@font-face {*/
-/*    font-family: 'Involve';*/
-/*    src: url('./fonts/Involve/Involve-Bold.ttf') format('truetype');*/
-/*    font-weight: 700; !* Bold обычно это 700 *!*/
-/*    font-style: normal;*/
-/*    font-display: swap;*/
-/*}*/
+@font-face {
+    font-family: 'AvantLett';
+    src: url('./fonts/Involve/ofont.ru_a_AvanteLt.ttf') format('truetype');
+    font-weight: 500; /* Bold обычно это 700 */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ru_Hero';
+    src: url('./fonts/Involve/ofont.ru_Hero.ttf') format('truetype');
+    font-weight: 500; /* Bold обычно это 700 */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'josef';
+    src: url('./fonts/Involve/JosefinSans.ttf') format('truetype');
+    font-weight: 500; /* Bold обычно это 700 */
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'josef-italic';
+    src: url('./fonts/Involve/JosefinSans-Italic.ttf') format('truetype');
+    font-weight: 500; /* Bold обычно это 700 */
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 html, body {

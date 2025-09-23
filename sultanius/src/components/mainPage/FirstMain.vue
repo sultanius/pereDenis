@@ -112,6 +112,8 @@ nav {
     align-items: center; /* Выравниваем по центру по вертикали */
     overflow: hidden; /* Это можно оставить, чтобы скрыть любой избыточный контент */
     color: white; /* Цвет текста */
+    position: relative; /* База для абсолютных оверлеев и видео */
+    --edge-offset: clamp(16px, 5vw, 205px);
 }
 
 .image {
@@ -119,11 +121,19 @@ nav {
     width: 100%; /* Изображение на 100% ширины контейнера */
 }
 
+#myVideo {
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Видео заполняет контейнер без искажений, обрезая края */
+}
+
 .right-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 80px;
-    right: 205px;
+    top: clamp(16px, 4vw, 80px);
+    right: var(--edge-offset);
     font-size: 36px; /* Размер текста на кнопке */
     cursor: pointer; /* Курсор в виде указателя при наведении */
 }
@@ -131,8 +141,8 @@ nav {
 .right-bottom-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    bottom: 85px;
-    right: 205px;
+    bottom: clamp(24px, 5vw, 85px);
+    right: var(--edge-offset);
     font-size: 45px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */
@@ -142,8 +152,8 @@ nav {
 .left-top-text {
     z-index: 1; /* Убедитесь, что кнопка видима над изображением */
     position: absolute; /* Абсолютное позиционирование для кнопки */
-    top: 85px;
-    left: 205px;
+    top: clamp(16px, 4vw, 85px);
+    left: var(--edge-offset);
     font-size: 36px; /* Размер текста на кнопке */
     padding: 10px; /* Паддинг для удобства */
     cursor: pointer; /* Курсор в виде указателя при наведении */

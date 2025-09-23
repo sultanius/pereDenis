@@ -93,7 +93,7 @@ export default {
             architectureOptions: [
                 { id: 1, name: 'Эскизный проект', price: 2000 },
                 { id: 2, name: 'Рабочий проект АР', price: 1500 },
-                { id: 3, name: 'Конструктивный раздел КЖ', price: 400 },
+                { id: 3, name: 'Конструктивный раздел КЖ', price: 450 },
                 { id: 4, name: 'Инженерия ВК и ОВ', price: 400 },
             ],
             interiorOptions: [

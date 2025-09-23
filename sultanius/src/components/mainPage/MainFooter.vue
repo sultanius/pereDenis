@@ -4,7 +4,7 @@
             <div class="main-footer-container-grid__one grid-block--bottom" >
                 <h1 class="hide-on-dekstop">КОНТАКТЫ</h1>
 
-                <PereDesign class="main-footer-pere-icon" style="margin-bottom: 24px;"/>
+                <PereDesign width="150" height="50" class="main-footer-pere-icon" style="margin-bottom: 24px;"/>
 
                 <p class="main-footer-telephone">
                     +7 (921) 443 23 10
