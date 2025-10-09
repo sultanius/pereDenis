@@ -107,7 +107,7 @@ h1{
     margin-bottom: 32px;
 }
 p{
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px при базе 16px */
     line-height: 100%;
 }
 .main-footer-container {
@@ -123,6 +123,8 @@ p{
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
     grid-gap: 16px; /* Отступы между колонками */
     padding-bottom: 60px;
+    padding-left: var(--page-side-padding);
+    padding-right: var(--page-side-padding);
 }
 .main-footer-container-grid__one {
     display: flex;
@@ -212,6 +214,5 @@ input {
     transition: border-color 0.3s; /* Плавный переход для изменения цвета рамки */
 }
 
-.custom-input:focus {
-}
+
 </style>

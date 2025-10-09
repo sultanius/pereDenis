@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div v-if="isDesktop" class="about-self-container">
         <div style="margin: 0 auto">
             <img src="../../assets/imgs/mainPage/pereDen.jpg" >
@@ -40,7 +41,7 @@
         <h1 style="text-align: right">ПРИНЦИПЫ МОЕЙ РАБОТЫ</h1>
 
         <div class="about-self-additional-grid">
-            <div class="about-self-additional-grid__one-mobile">
+            <div class="about-self-additional-grid__one">
                 <div>
                     <svg width="43" height="136" viewBox="0 0 43 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.792 23.024H0.680002V0.0239959H42.264V136H17.792V23.024Z" fill="#E5E5E5"/>
@@ -138,6 +139,7 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script setup>
@@ -194,7 +196,8 @@ div, p {
 .about-self-additional-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15rem 32rem;
+    row-gap: clamp(4rem, 8vw, 15rem);
+    column-gap: clamp(2rem, 6vw, 32rem);
 }
 
 .about-self-additional-grid__one {
@@ -202,6 +205,8 @@ div, p {
     border-left: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(12px, 2vw, 32px);
     padding-top: 32px;
     padding-left: 32px;
     padding-right: 32px;
@@ -211,6 +216,8 @@ div, p {
     border-right: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(12px, 2vw, 32px);
 
     padding-top: 32px;
     padding-right: 32px;
@@ -220,6 +227,8 @@ div, p {
     border-left: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(12px, 2vw, 32px);
     padding-bottom: 32px;
     padding-left: 32px;
     padding-right: 32px;
@@ -229,6 +238,8 @@ div, p {
     border-right: 1px solid black;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(12px, 2vw, 32px);
     padding-bottom: 32px;
     padding-right: 32px;
 }
@@ -242,6 +253,8 @@ div, p {
 .about-self-additional-container {
     max-width: 1520px;
     margin: 0 auto;
+    padding-left: var(--page-side-padding);
+    padding-right: var(--page-side-padding);
 }
 
 .main-page-projects-btn {

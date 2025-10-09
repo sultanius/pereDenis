@@ -161,6 +161,7 @@ export default {
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 500;
+    color: black
 }
 
 .calc-type-btn.active {

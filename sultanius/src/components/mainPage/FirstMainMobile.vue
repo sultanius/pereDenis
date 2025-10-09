@@ -1,16 +1,14 @@
 <template>
     <div class="first-main-mobile-container">
         <video
-            poster="../../assets/imgs/mainPage/mainFIrstImgMobile.png"
             video
-            autoplay
             loop
             muted
             playsinline
-            id="myVideo"
+            id="myVideoMobile"
             webkit-playsinline="true"
         >
-            <source  src="../../assets/mainVideo.mp4" type="video/mp4">
+            <source  src="../../assets/mainVideo_ios.mp4" type="video/mp4">
         </video>
 
         <div class="first-main-mobile__btn-navigation" @click="toggleMenu">
@@ -31,9 +29,24 @@
 </template>
 
 <script setup>
-import { ref,  } from 'vue'
+import { ref,  onMounted} from 'vue'
 
 import MobileMenuNavigation from './MobileMenuNavigation.vue';
+
+onMounted(() => {
+            const video = document.getElementById('myVideoMobile');
+            if (video && video instanceof HTMLVideoElement) {
+                video.muted = true; // iOS требует mute для автозапуска
+                // @ts-ignore
+                video.playsInline = true; // iOS Safari inline
+                const tryPlay = () => {
+                    // Попытка воспроизведения без пользовательского жеста (muted)
+                    video.play().catch(() => {});
+                };
+                video.addEventListener('canplay', tryPlay, { once: true });
+                tryPlay();
+            }
+        });
 
 
 const menuActive = ref();

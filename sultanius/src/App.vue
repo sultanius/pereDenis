@@ -13,20 +13,7 @@ import { useRouter } from 'vue-router'
 const test = ref('asdasdasdasd');
 const router = useRouter();
 
-onMounted(() => {
-            const video = document.getElementById('myVideo');
-            if (video && video instanceof HTMLVideoElement) {
-                video.muted = true; // iOS требует mute для автозапуска
-                // @ts-ignore
-                video.playsInline = true; // iOS Safari inline
-                const tryPlay = () => {
-                    // Попытка воспроизведения без пользовательского жеста (muted)
-                    video.play().catch(() => {});
-                };
-                video.addEventListener('canplay', tryPlay, { once: true });
-                tryPlay();
-            }
-        });
+
 
 
 </script>
@@ -46,6 +33,11 @@ onMounted(() => {
 </template>
 
 <style >
+/* Глобальные переменные отступов и базового шрифта */
+:root {
+    --page-side-padding: clamp(16px, 5vw, 64px);
+    --font-size-base: clamp(14px, 0.9vw + 10px, 16px);
+}
 @media (max-width: 768px) {
     .hide-on-mobile{
         display: none;
@@ -135,9 +127,18 @@ html, body {
     scroll-behavior: smooth !important;
     font-family: 'FuturaLightC', Arial, sans-serif;
     color: #3d3d3d;
+    font-size: var(--font-size-base);
 }
 html:focus-within {
     scroll-behavior: smooth;
+}
+
+/* Тёмная тема: мягкий цвет текста, чтобы не был чисто белым */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e6e6e6;
+    }
+    a { color: #cfd8ff; }
 }
 
 /* Контейнер для десктопных внутренних страниц */
@@ -145,8 +146,8 @@ html:focus-within {
     max-width: 1520px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: clamp(16px, 5vw, 64px);
-    padding-right: clamp(16px, 5vw, 64px);
+    padding-left: var(--page-side-padding);
+    padding-right: var(--page-side-padding);
 }
 
 /* Безопасное перенесение длинных слов/ссылок, чтобы текст не вылезал из блоков */

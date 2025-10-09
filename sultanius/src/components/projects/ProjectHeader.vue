@@ -1,20 +1,18 @@
 <template>
-    <div class="header-projects">
-
-        <div class="first-main-mobile__btn-navigation" @click="toggleMenu">
-            <div class="first-main-mobile__btn-navigation__line"></div>
-            <div class="first-main-mobile__btn-navigation__line"></div>
-            <div class="first-main-mobile__btn-navigation__line"></div>
+    <div>
+        <div class="header-projects">
+            <div class="first-main-mobile__btn-navigation" @click="toggleMenu">
+                <div class="first-main-mobile__btn-navigation__line"></div>
+                <div class="first-main-mobile__btn-navigation__line"></div>
+                <div class="first-main-mobile__btn-navigation__line"></div>
+            </div>
+            <div class="hide-on-mobile">
+                <PereDesignBlack  />
+            </div>
+            <FillBtn class="hide-on-mobile" @click="goToMainFooter"> Написать мне </FillBtn>
         </div>
-
-        <div class="hide-on-mobile">
-            <PereDesignBlack  />
-        </div>
-
-        <FillBtn class="hide-on-mobile"> Написать мне </FillBtn>
+        <MobileMenuNavigation :menuOpen="menuActive" @close="menuActive = false"/>
     </div>
-
-    <MobileMenuNavigation :menuOpen="menuActive" @close="menuActive = false"/>
 </template>
 
 <script setup>
@@ -25,7 +23,7 @@ import PereDesignBlack from '../icons/PereDesignBlack.vue'
 
 import { ref,  } from 'vue'
 import { useNavigate } from '@/composables/useNavigate.js'
-
+import { goToMainFooter } from '@/composables/helper.js'
 const { navigateTo } = useNavigate();
 
 import MobileMenuNavigation from '../../components/mainPage/MobileMenuNavigation.vue';
@@ -47,7 +45,7 @@ const toggleMenu = () => {
     justify-content: space-between;
     max-width: 1520px;
     margin: 0 auto;
-    padding: 48px 16px;
+    padding: 48px var(--page-side-padding);
     color: white;
 }
 
