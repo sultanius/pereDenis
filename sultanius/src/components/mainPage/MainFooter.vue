@@ -61,12 +61,12 @@ export default {
             phone: '',
             comment: '',
         });
-        const BOT_TOKEN = '7594388162:AAFXn-Nf0DfZVUgU9jNHdDfU0wcfuxMfKZ0';
-        const CHAT_ID = 'pere_design_bot';
+        const BOT_TOKEN = '8406286548:AAGkTpAbBP9Cf89dywG3BJ1YP3ycIlCuR5A';
+        const CHAT_ID = 349087015;
 
         const onSubmit = async () => {
 
-            // const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/getUpdates`);
+            // const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN1}/getUpdates`);
             // const data = await response.json();
             // console.log(444, data);
 
@@ -75,7 +75,7 @@ export default {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        chat_id: 1056416114,
+                        chat_id: CHAT_ID,
                         text: `Привет меня зовут ${form.name}, моя контактная информация; Телефон: ${form.phone}, Почта: ${form.email}, Доп.инфа: ${form.comment},`
                     })
                 })

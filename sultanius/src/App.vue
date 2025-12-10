@@ -135,7 +135,7 @@ html:focus-within {
 
 /* Тёмная тема: мягкий цвет текста, чтобы не был чисто белым */
 @media (prefers-color-scheme: dark) {
-    body {
+    html, body, div, p {
         color: #e6e6e6;
     }
     a { color: #cfd8ff; }
