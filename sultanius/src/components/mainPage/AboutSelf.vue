@@ -287,7 +287,11 @@ div, p {
     .about-self-additional-grid-mobile {
         display: grid;
         grid-template-columns: 2fr 10fr;
-        gap: 25px;
+        gap: 15px;
+    }
+
+    .about-self-additional-grid-item-text-mobile svg {
+        flex: 0 0 40px;
     }
 
     .about-self-additional-grid-item-mobile {

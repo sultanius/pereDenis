@@ -14,6 +14,28 @@ const test = ref('asdasdasdasd');
 const router = useRouter();
 
 
+onMounted(() => {
+    try {
+        const script = document.createElement('script');
+        script.src ="https://mc.yandex.ru/metrika/tag.js";
+        script.async = true;
+        script.onload = () => {
+            window.Ya.Metrika2 = new window.Ya.Metrika2({
+                id: 105773966,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+            });
+        };
+        script.onerror = (error) => {
+            console.error('Failed to load Yandex Metrica script', error);
+        };
+        document.head.appendChild(script);
+    } catch (error) {
+        console.error('An error occurred while loading Yandex Metrica script', error);
+    }
+})
 
 
 </script>
