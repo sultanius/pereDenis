@@ -19,9 +19,9 @@
 
 
         <div class="first-main-mobile__bottom-left">
-            <p style="font-size: 24px; font-weight: normal">АРХИТЕКТУРА</p>
-            <p>КОМФОРТНОЙ</p>
-            <p>ЖИЗНИ</p>
+            <p style="font-size: 24px; font-weight: normal">{{ t(site.firstMainMobile.line1) }}</p>
+            <p>{{ t(site.firstMainMobile.line2) }}</p>
+            <p>{{ t(site.firstMainMobile.line3) }}</p>
         </div>
     </div>
 
@@ -32,6 +32,10 @@
 import { ref,  onMounted} from 'vue'
 
 import MobileMenuNavigation from './MobileMenuNavigation.vue';
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
+
+const { t } = useSiteLocale()
 
 onMounted(() => {
             const video = document.getElementById('myVideoMobile');

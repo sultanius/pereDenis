@@ -25,17 +25,17 @@
 
                         <ul>
                             <li @click="navigateTo('/')">
-                                <a href="/">ГЛАВНАЯ</a>
+                                <a href="/">{{ t(site.nav.home) }}</a>
                             </li>
                             <li @click="navigateTo('/about-self')">
-                                <a>ОБО МНЕ</a>
+                                <a>{{ t(site.nav.about) }}</a>
                             </li>
-                            <li @click="navigateTo('/projects')">ПРОЕКТЫ</li>
+                            <li @click="navigateTo('/projects')">{{ t(site.nav.projects) }}</li>
                             <li>
-                                <a href="#price-project">СТОИМОСТЬ</a>
+                                <a href="#price-project">{{ t(site.nav.price) }}</a>
                             </li>
                             <li @click="navigateTo('/contacts')">
-                                <a>КОНТАКТЫ</a>
+                                <a>{{ t(site.nav.contacts) }}</a>
                             </li>
                         </ul>
                     </div>
@@ -66,15 +66,35 @@
             </div>
         </div>
 
-        <div class="right-top-text"> ru|en </div>
+        <div class="right-top-text lang-switch">
+            <span
+                class="lang"
+                :class="{ active: locale === 'ru' }"
+                role="button"
+                tabindex="0"
+                @click="setLocale('ru')"
+                @keydown.enter.prevent="setLocale('ru')"
+                @keydown.space.prevent="setLocale('ru')"
+            >ru</span>
+            <span class="lang-sep">|</span>
+            <span
+                class="lang"
+                :class="{ active: locale === 'en' }"
+                role="button"
+                tabindex="0"
+                @click="setLocale('en')"
+                @keydown.enter.prevent="setLocale('en')"
+                @keydown.space.prevent="setLocale('en')"
+            >en</span>
+        </div>
 
         <div class="right-bottom-text" >
             <div style="font-size: 35px">
-                АРХИТЕКТУРА
+                {{ t(site.firstMain.heroLine1) }}
             </div>
 
             <div>
-                КОМФОРТНОЙ ЖИЗНИ
+                {{ t(site.firstMain.heroLine2) }}
             </div>
         </div>
     </div>
@@ -84,12 +104,15 @@
 import PereDesign from '../icons/PereDesign.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useSiteLocale } from '../../composables/useSiteLocale'
+import { site } from '../../locales/site'
 
 export default {
     components: { PereDesign },
     setup() {
         const router = useRouter();
         const isHeaderOpen = ref(false);
+        const { locale, setLocale, t } = useSiteLocale();
 
         const toggleHeader = () => {
             isHeaderOpen.value = !isHeaderOpen.value;
@@ -128,6 +151,10 @@ export default {
             isHeaderOpen,
             toggleHeader,
             navigateTo,
+            locale,
+            setLocale,
+            t,
+            site,
         };
     }
 };
@@ -178,6 +205,24 @@ nav {
     right: var(--edge-offset);
     font-size: 36px; /* Размер текста на кнопке */
     cursor: pointer; /* Курсор в виде указателя при наведении */
+}
+
+.lang-switch {
+    user-select: none;
+}
+.lang-switch .lang {
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+}
+.lang-switch .lang:hover,
+.lang-switch .lang.active {
+    opacity: 1;
+}
+.lang-switch .lang-sep {
+    margin: 0 0.35em;
+    cursor: default;
+    opacity: 0.45;
 }
 
 .right-bottom-text {

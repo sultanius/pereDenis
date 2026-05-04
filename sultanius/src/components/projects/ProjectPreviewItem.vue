@@ -9,22 +9,25 @@
             <div class="bottom-line"></div>
 
             <div class="bottom-left">
-                <div>Стадия</div>
-                <div>{{ item.stageProcess }}</div>
+                <div>{{ t(site.projectMeta.stage) }}</div>
+                <div>{{ item.stageKey ? t(site.stages[item.stageKey]) : '' }}</div>
             </div>
-            <div class="bottom-right">{{ item.square }}</div>
+            <div class="bottom-right">{{ localizeSquare(item.square, locale) }}</div>
         </div>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site, localizeSquare } from '@/locales/site'
+
+const { t, locale } = useSiteLocale()
 
 const props = defineProps({
     id: Number,
     year: String,
     name: String,
-    stageProcess: String,
     square: String,
     image: String,
     item: Object,

@@ -3,28 +3,27 @@
         <div></div>
         <div>
             <h1>
-                ОТКРЫТ ДЛЯ ПРОЕКТОВ
+                {{ t(site.contacts.headline1) }}
                 <br />
-                В ЛЮБОЙ ТОЧКЕ МИРА
+                {{ t(site.contacts.headline2) }}
             </h1>
 
             <div class="contacts-comp-box-info">
                 <div class="left" >
                     <div>
-
-                        Текущее
+                        {{ t(site.contacts.locationLine1) }}
                         <br/>
-                        местоположение
+                        {{ t(site.contacts.locationLine2) }}
                     </div>
                 </div>
                 <div class="right">
-                    <p style="font-weight: 400">Санкт-Петербург,</p>
-                    <p>Россия</p>
+                    <p style="font-weight: 400">{{ t(site.contacts.city) }}</p>
+                    <p>{{ t(site.contacts.country) }}</p>
                 </div>
             </div>
 
             <div class="contacts-comp-box-info">
-                <div class="left">Телефон / Email</div>
+                <div class="left">{{ t(site.contacts.phoneEmail) }}</div>
                 <div class="right">
                     <p>+7 (921) 443-23-10</p>
                     <br/>
@@ -33,7 +32,7 @@
             </div>
 
             <div class="contacts-comp-box-info">
-                <div class="left">Социальный сети</div>
+                <div class="left">{{ t(site.contacts.social) }}</div>
                 <div class="right right-social">
                     <div>
                         <TelegramIcon />
@@ -59,8 +58,10 @@
 import TelegramIcon from '../icons/TelegramIcon.vue'
 import InstagramIcon from '../icons/InstagramIcon.vue'
 import YouTubeIcon from '../icons/YouTubeIcon.vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
 
-
+const { t } = useSiteLocale()
 </script>
 
 <style scoped>

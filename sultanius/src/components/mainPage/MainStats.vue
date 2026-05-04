@@ -2,22 +2,22 @@
     <div class="main-stats-container">
         <div class="test">
             <h1 id="count1">26+</h1>
-            <p>Домов <br class="hide-on-dekstop"/> спроектировано</p>
+            <p>{{ t(site.stats.homesDesigned) }}</p>
         </div>
 
         <div class="test">
             <h1 id="count2">11+</h1>
-            <p>На стадии <br class="hide-on-dekstop"/>реализации</p>
+            <p>{{ t(site.stats.inProgress) }}</p>
         </div>
 
         <div class="test">
             <h1 id="count3">5+</h1>
-            <p>Завершенных <br class="hide-on-dekstop"/>проектов</p>
+            <p>{{ t(site.stats.completed) }}</p>
         </div>
 
         <div class="test">
             <h1 id="count4">3</h1>
-            <p>Месяца срок<br class="hide-on-dekstop"/> проекта</p>
+            <p>{{ t(site.stats.timeline) }}</p>
         </div>
     </div>
 </template>
@@ -26,6 +26,10 @@
 import FillBtn from '../../components/ui/FillBtn.vue'
 
 import { onMounted } from 'vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
+
+const { t } = useSiteLocale()
 
 const animateCounter = (id, target, duration) => {
     const element = document.getElementById(id);

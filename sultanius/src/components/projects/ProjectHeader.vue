@@ -9,7 +9,7 @@
             <div class="hide-on-mobile">
                 <PereDesignBlack  />
             </div>
-            <FillBtn class="hide-on-mobile" @click="goToMainFooter"> Написать мне </FillBtn>
+            <FillBtn class="hide-on-mobile" @click="goToMainFooter">{{ t(site.projectHeader.writeMe) }}</FillBtn>
         </div>
         <MobileMenuNavigation :menuOpen="menuActive" @close="menuActive = false"/>
     </div>
@@ -27,7 +27,10 @@ import { goToMainFooter } from '@/composables/helper.js'
 const { navigateTo } = useNavigate();
 
 import MobileMenuNavigation from '../../components/mainPage/MobileMenuNavigation.vue';
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
 
+const { t } = useSiteLocale()
 
 const menuActive = ref();
 

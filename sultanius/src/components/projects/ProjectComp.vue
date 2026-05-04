@@ -3,26 +3,26 @@
     <div  class="propject-comp-container">
         <div></div>
         <div>
-            <h1>ПРОЕКТЫ</h1>
+            <h1>{{ t(site.projectsPage.title) }}</h1>
 
-            <p>Каждый проект, который я реализую, отражает нашу философию минимализма и стремление к идеальному балансу между стилем и функциональностью</p>
-            <p>Я горжусь тем, что мои дома становятся не просто архитектурными сооружениями, а пространствами для жизни, наполненными комфортом и светом</p>
-            <p>В этом разделе представлены некоторые из моих самых успешных проектов, которые подчеркивают наш подход к индивидуальности и вниманию к деталям</p>
+            <p>{{ t(site.projectsPage.intro1) }}</p>
+            <p>{{ t(site.projectsPage.intro2) }}</p>
+            <p>{{ t(site.projectsPage.intro3) }}</p>
         </div>
 
         <div class="toggle-buttons">
-            <button class="toggle-button active" @click="setActive(0)">Все проекты</button>
-            <button class="toggle-button" @click="setActive(1)">Частные дома</button>
-            <button class="toggle-button" @click="setActive(2)">Интерьер</button>
+            <button class="toggle-button active" @click="setActive(0)">{{ t(site.projectsPage.filterAll) }}</button>
+            <button class="toggle-button" @click="setActive(1)">{{ t(site.projectsPage.filterHouses) }}</button>
+            <button class="toggle-button" @click="setActive(2)">{{ t(site.projectsPage.filterInterior) }}</button>
         </div>
 
         <div class="propject-comp-select">
             <select name="city" id="city-select" class="custom-select">
-                <option value="petersburg">Строительство</option>
-                <option value="petersburg">Типовой проект</option>
-                <option value="petersburg">Реализован</option>
-                <option value="petersburg">Ожидание строительства</option>
-                <option value="petersburg">Концепт</option>
+                <option value="petersburg">{{ t(site.projectsPage.optConstruction) }}</option>
+                <option value="petersburg">{{ t(site.projectsPage.optTypical) }}</option>
+                <option value="petersburg">{{ t(site.projectsPage.optDone) }}</option>
+                <option value="petersburg">{{ t(site.projectsPage.optWaiting) }}</option>
+                <option value="petersburg">{{ t(site.projectsPage.optConcept) }}</option>
             </select>
 
             <select name="city"  class="custom-select">
@@ -57,6 +57,10 @@ const goToProject = (pathUrl) => {
 
 
 import { computed , ref } from 'vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
+
+const { t } = useSiteLocale()
 
 const typeProject = ref(0);
 const projects = computed(() => {

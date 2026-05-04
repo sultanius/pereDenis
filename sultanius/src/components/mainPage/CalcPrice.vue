@@ -6,19 +6,19 @@
                 :class="['calc-type-btn', { active: activeCalc === 'architecture' }]"
                 @click="setActiveCalc('architecture')"
             >
-                Стоимость архитектурного проекта
+                {{ t(site.calc.archTitle) }}
             </button>
             <button
                 :class="['calc-type-btn', { active: activeCalc === 'interior' }]"
                 @click="setActiveCalc('interior')"
             >
-                Стоимость дизайна интерьера
+                {{ t(site.calc.interiorTitle) }}
             </button>
         </div>
 
         <!-- Чекбоксы для архитектурного проекта -->
         <div v-if="activeCalc === 'architecture'" class="calc-options">
-            <h3>Выберите услуги:</h3>
+            <h3>{{ t(site.calc.pickServices) }}</h3>
             <div class="calc-price-points-box">
                 <label v-for="option in architectureOptions" :key="option.id">
                     <input
@@ -27,14 +27,14 @@
                         :value="option.id"
                         @change="calculateTotal"
                     >
-                    <span>{{ option.name }} ({{ option.price }} руб/м²)</span>
+                    <span>{{ t(site.calc.arch[option.id]) }} ({{ option.price }} {{ t(site.calc.perM2) }})</span>
                 </label>
             </div>
         </div>
 
         <!-- Чекбоксы для дизайна интерьера -->
         <div v-if="activeCalc === 'interior'" class="calc-options">
-            <h3>Выберите услуги:</h3>
+            <h3>{{ t(site.calc.pickServices) }}</h3>
             <div class="calc-price-points-box">
                 <label v-for="option in interiorOptions" :key="option.id">
                     <input
@@ -43,14 +43,14 @@
                         :value="option.id"
                         @change="calculateTotal"
                     >
-                    <span>{{ option.name }} ({{ option.price }} руб/м²)</span>
+                    <span>{{ t(site.calc.interior[option.id]) }} ({{ option.price }} {{ t(site.calc.perM2) }})</span>
                 </label>
             </div>
         </div>
 
         <!-- Ползунок для площади -->
         <div class="area-slider">
-            <label for="area-range">Площадь (м²): {{ area }}</label>
+            <label for="area-range">{{ t(site.calc.areaLabel) }} {{ area }}</label>
             <input
                 type="range"
                 id="area-range"
@@ -61,14 +61,14 @@
                 @input="calculateTotal"
             >
             <div class="slider-values">
-                <span>10 м²</span>
-                <span>1000 м²</span>
+                <span>{{ t(site.calc.rangeMin) }}</span>
+                <span>{{ t(site.calc.rangeMax) }}</span>
             </div>
         </div>
 
         <!-- Итоговая стоимость -->
         <div class="total-cost" @click="goToPage">
-            <h2>УЗНАТЬ СТОИМОСТЬ <span style="font-family: Involve">?</span> </h2>
+            <h2>{{ t(site.calc.cta) }} <span style="font-family: Involve">?</span> </h2>
 <!--            <h2>Общая стоимость: {{ totalCost.toLocaleString() }} руб</h2>-->
         </div>
     </div>
@@ -78,10 +78,16 @@
 import FillBtn from '../../components/ui/FillBtn.vue'
 import { useNavigate } from '@/composables/useNavigate.js'
 import { goToMainFooter } from '@/composables/helper.js'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
 
 export default {
     components: {
         FillBtn
+    },
+    setup() {
+        const { t } = useSiteLocale()
+        return { t, site }
     },
     data() {
         return {
@@ -91,14 +97,14 @@ export default {
             selectedInterior: [],
             totalCost: 0,
             architectureOptions: [
-                { id: 1, name: 'Эскизный проект', price: 2000 },
-                { id: 2, name: 'Рабочий проект АР', price: 1500 },
-                { id: 3, name: 'Конструктивный раздел КЖ', price: 450 },
-                { id: 4, name: 'Инженерия ВК и ОВ', price: 400 },
+                { id: 1, price: 2000 },
+                { id: 2, price: 1500 },
+                { id: 3, price: 450 },
+                { id: 4, price: 400 },
             ],
             interiorOptions: [
-                { id: 1, name: 'Эскизный проект', price: 2000 },
-                { id: 2, name: 'Рабочий проект РП', price: 1500 },
+                { id: 1, price: 2000 },
+                { id: 2, price: 1500 },
             ]
         }
     },

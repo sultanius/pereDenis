@@ -14,16 +14,16 @@
         </div>
 
 
-        <WhiteTransparentBtn style="margin-bottom: 48px" @click="goToFooter"> НАПИСАТЬ МНЕ </WhiteTransparentBtn>
+        <WhiteTransparentBtn style="margin-bottom: 48px" @click="goToFooter">{{ t(site.mobileMenu.writeMe) }}</WhiteTransparentBtn>
 
         <div class="menu-content">
             <nav>
                 <ul>
-                    <li @click="goToPage('/')">ГЛАВНАЯ</li>
-                    <li @click="goToPage('/about-self')">ОБО МНЕ</li>
-                    <li @click="goToPage('/projects')">ПРОЕКТЫ</li>
-                    <li @click="goToPricePage">СТОИМОСТЬ</li>
-                    <li @click="goToPage('/contacts')">КОНТАКТЫ</li>
+                    <li @click="goToPage('/')">{{ t(site.nav.home) }}</li>
+                    <li @click="goToPage('/about-self')">{{ t(site.nav.about) }}</li>
+                    <li @click="goToPage('/projects')">{{ t(site.nav.projects) }}</li>
+                    <li @click="goToPricePage">{{ t(site.nav.price) }}</li>
+                    <li @click="goToPage('/contacts')">{{ t(site.nav.contacts) }}</li>
                 </ul>
             </nav>
 
@@ -44,9 +44,17 @@
             </div>
 
             <div class="mobile-menu__translate">
-                <div class="mobile-menu__translate-item">ru</div>
+                <div
+                    class="mobile-menu__translate-item"
+                    :class="{ 'lang-inactive': locale !== 'ru' }"
+                    @click="setLocale('ru')"
+                >ru</div>
                 <div class="mobile-menu__translate-item-br"></div>
-                <div class="mobile-menu__translate-item" style="color: #636363; border-color: #636363">en</div>
+                <div
+                    class="mobile-menu__translate-item"
+                    :class="{ 'lang-inactive': locale !== 'en' }"
+                    @click="setLocale('en')"
+                >en</div>
             </div>
 
         </div>
@@ -60,7 +68,10 @@ import WhiteTransparentBtn from '../../components/ui/WhiteTransparentBtn.vue'
 import PereDesign from '@/components/icons/PereDesign.vue'
 import { useNavigate } from '@/composables/useNavigate.js'
 import { navigateToPrice, goToMainFooter } from '@/composables/helper.js'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
 
+const { locale, setLocale, t } = useSiteLocale()
 
 const props = defineProps({
     menuOpen: String,
@@ -172,6 +183,10 @@ li {
     font-size: 16px;
     line-height: 100%;
     cursor: pointer;
+}
+.mobile-menu__translate-item.lang-inactive {
+    color: #636363;
+    border-color: #636363;
 }
 .mobile-menu__translate-item-br {
     height: 36px;

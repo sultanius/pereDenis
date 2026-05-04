@@ -5,25 +5,13 @@
             <img src="../../assets/imgs/mainPage/pereDen.jpg" >
         </div>
         <div >
-            <h1>ДЕНИС ПЕРЕВОЗНИКОВ</h1>
+            <h1>{{ t(site.about.title) }}</h1>
 
-            <p>
-                Начиная каждый проект,
-                целиком и полностью отдаю ему время и себя, с первой личной встречи с заказчиком, заканчивая различными деталями в архитектуре или при выборе декора в интерьере.
-            </p>
+            <p>{{ t(site.about.p1) }}</p>
 
-            <p>
-                Сфера проектирования частных пространств особенно близка мне. В этом случае, ты более конкретно,
-                с особым трепетом стараешься сделать идеально для конкретного заказчика и от этого  получаю максимальное удовольствие и мотивацию.
-            </p>
+            <p>{{ t(site.about.p2) }}</p>
 
-            <p>
-                Быть архитектором, значит каждый день строить в голове какие-то образы,
-                искать, смотреть и сохранять всевозможные текстуры объемы, ракурсы,
-                технологии
-                и делать зарисовки. И не важно пригодится это или нет, чаще всего все это
-                делается на подсознании и в последствие может всплыть в люблю секунду.
-            </p>
+            <p>{{ t(site.about.p3) }}</p>
 
             <PereDesignBlack class="pere-icon" />
         </div>
@@ -34,11 +22,11 @@
     <MainStats />
 
     <div class="main-page-projects-btn" >
-        <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" @click="navigateTo('/projects')"> ПРОЕКТЫ </FillBtn>
+        <FillBtn style="margin: 0 auto; width: 400px; text-align: center;" @click="navigateTo('/projects')">{{ t(site.about.projectsBtn) }}</FillBtn>
     </div>
 
     <div v-if="router.currentRoute.value.fullPath !== '/' && isDesktop" class="about-self-additional-container">
-        <h1 style="text-align: right">ПРИНЦИПЫ МОЕЙ РАБОТЫ</h1>
+        <h1 style="text-align: right">{{ t(site.about.principlesTitle) }}</h1>
 
         <div class="about-self-additional-grid">
             <div class="about-self-additional-grid__one">
@@ -48,14 +36,14 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="about-self-bold-p">Комфорт и удобство</p>
-                    <p>Пространство должно быть <br/> эргономичным и удобным <br/> для жизни каждый день</p>
+                    <p class="about-self-bold-p">{{ t(site.about.comfortTitle) }}</p>
+                    <p>{{ t(site.about.comfortBody) }}</p>
                 </div>
             </div>
             <div class="about-self-additional-grid__two">
                 <div>
-                    <p class="about-self-bold-p">Эстетика <br/> и индивидуальность</p>
-                    <p>Дом отражает личность <br/>хозяина, а не просто следует <br/>трендам</p>
+                    <p class="about-self-bold-p">{{ t(site.about.aestheticsTitle) }}</p>
+                    <p>{{ t(site.about.aestheticsBody) }}</p>
                 </div>
                 <div>
                     <svg width="91" height="139" viewBox="0 0 91 139" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,14 +58,14 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="about-self-bold-p">Практичность</p>
-                    <p>Использую решения, <br/> которые служат годами <br/> и упрощают эксплуатацию</p>
+                    <p class="about-self-bold-p">{{ t(site.about.practicalTitle) }}</p>
+                    <p>{{ t(site.about.practicalBody) }}</p>
                 </div>
             </div>
             <div class="about-self-additional-grid__four">
                 <div>
-                    <p class="about-self-bold-p">Реализуемость <br/> проекта</p>
-                    <p>Проектирую то, <br/> что реально построить<br/> в срок и в бюджет</p>
+                    <p class="about-self-bold-p">{{ t(site.about.feasibleTitle) }}</p>
+                    <p>{{ t(site.about.feasibleBody) }}</p>
                 </div>
                 <div>
                     <svg width="99" height="136" viewBox="0 0 99 136" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +77,7 @@
     </div>
 
     <div v-else-if="router.currentRoute.value.fullPath !== '/'" class="about-self-additional-container-mobile">
-        <h1>ПРИНЦИПЫ МОЕЙ РАБОТЫ</h1>
+        <h1>{{ t(site.about.principlesTitle) }}</h1>
 
         <div class="about-self-additional-grid-mobile">
             <div class="about-self-additional-grid-item-mobile">
@@ -121,20 +109,20 @@
 
             <div>
                 <div class="about-self-additional-grid-item-text-mobile">
-                    <p class="about-self-bold-p">Комфорт и удобство</p>
-                    <p>Пространство должно быть <br/> эргономичным и удобным <br/> для жизни каждый день</p>
+                    <p class="about-self-bold-p">{{ t(site.about.comfortTitle) }}</p>
+                    <p>{{ t(site.about.comfortBody) }}</p>
                 </div>
                 <div class="about-self-additional-grid-item-text-mobile">
-                    <p class="about-self-bold-p">Эстетика <br/> и индивидуальность</p>
-                    <p>Дом отражает личность <br/>хозяина, а не просто следует <br/>трендам</p>
+                    <p class="about-self-bold-p">{{ t(site.about.aestheticsTitle) }}</p>
+                    <p>{{ t(site.about.aestheticsBody) }}</p>
                 </div>
                 <div class="about-self-additional-grid-item-text-mobile">
-                    <p class="about-self-bold-p">Практичность</p>
-                    <p>Использую решения, <br/> которые служат годами <br/> и упрощают эксплуатацию</p>
+                    <p class="about-self-bold-p">{{ t(site.about.practicalTitle) }}</p>
+                    <p>{{ t(site.about.practicalBody) }}</p>
                 </div>
                 <div class="about-self-additional-grid-item-text-mobile">
-                    <p class="about-self-bold-p">Реализуемость <br/> проекта</p>
-                    <p>Проектирую то, <br/> что реально построить<br/> в срок и в бюджет</p>
+                    <p class="about-self-bold-p">{{ t(site.about.feasibleTitle) }}</p>
+                    <p>{{ t(site.about.feasibleBody) }}</p>
                 </div>
             </div>
         </div>
@@ -152,6 +140,10 @@ import FillBtn from '../../components/ui/FillBtn.vue'
 import { useWindowSize } from '@/composables/useWindowSize.js'
 import { useRouter } from 'vue-router'
 import { useNavigate } from '@/composables/useNavigate.js'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
+
+const { t } = useSiteLocale()
 
 const router = useRouter();
 const { isDesktop, height } = useWindowSize()

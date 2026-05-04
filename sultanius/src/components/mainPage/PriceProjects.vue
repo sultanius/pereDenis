@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>СТОИМОСТЬ ПРОЕКТА</h1>
+        <h1>{{ t(site.priceProjects.pageTitle) }}</h1>
 
         <div class="price-projects-container">
             <div class="container-image">
@@ -8,11 +8,11 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 1800 руб\м2
+                        {{ t(site.priceProjects.archFrom) }}
                     </div>
 
                     <div class="bottom-text__item-two">
-                        АРХИТЕКТУРНЫЙ ПРОЕКТ
+                        {{ t(site.priceProjects.archTitle) }}
                     </div>
                 </div>
             </div>
@@ -22,11 +22,11 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 2000 руб\м2
+                        {{ t(site.priceProjects.designFrom) }}
                     </div>
 
                     <div class="bottom-text__item-two">
-                        ДИЗАЙН ИНТЕРЬЕРА
+                        {{ t(site.priceProjects.designTitle) }}
                     </div>
                 </div>
             </div>
@@ -36,11 +36,11 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 450 руб\м2
+                        {{ t(site.priceProjects.structFrom) }}
                     </div>
 
                     <div class="bottom-text__item-two">
-                        КОНСТРУКТИВНЫЙ ПРОЕКТ
+                        {{ t(site.priceProjects.structTitle) }}
                     </div>
                 </div>
             </div>
@@ -50,11 +50,11 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 400 руб\м2
+                        {{ t(site.priceProjects.mepFrom) }}
                     </div>
 
                     <div class="bottom-text__item-two">
-                        ПРОЕКТ ОВ И ВК
+                        {{ t(site.priceProjects.mepTitle) }}
                     </div>
                 </div>
             </div>
@@ -64,17 +64,24 @@
 
                 <div class="bottom-text">
                     <div class="bottom-text__item-one">
-                        от 30 000 руб\месяц
+                        {{ t(site.priceProjects.supervisionFrom) }}
                     </div>
 
                     <div class="bottom-text__item-two">
-                        АВТОРСКИЙ НАДЗОР
+                        {{ t(site.priceProjects.supervisionTitle) }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
+
+const { t } = useSiteLocale()
+</script>
 
 <style scoped>
 h1{

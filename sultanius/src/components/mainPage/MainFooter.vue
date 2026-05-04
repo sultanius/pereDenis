@@ -2,7 +2,7 @@
     <div class="main-footer-container">
         <div class="main-footer-container-grid">
             <div class="main-footer-container-grid__one grid-block--bottom" >
-                <h1 class="hide-on-dekstop">КОНТАКТЫ</h1>
+                <h1 class="hide-on-dekstop">{{ t(site.footer.contacts) }}</h1>
 
                 <PereDesign width="150" height="50" class="main-footer-pere-icon" style="margin-bottom: 24px;"/>
 
@@ -17,26 +17,26 @@
                 <div style="font-size: 15px;">
                     © 2025 |  "Pere.Design" |
                     <br class="hide-on-dekstop">
-                    Политика конфиденциальности
+                    {{ t(site.footer.privacy) }}
                 </div>
             </div>
 
             <div class="grid-block--top">
-                <h1>ОБСУДИМ ПРОЕКТ <span style="font-family: Involve">?</span> </h1>
+                <h1>{{ t(site.footer.discuss) }} <span style="font-family: Involve">?</span> </h1>
 
                 <form>
                     <div class="form-inputs">
-                        <input class="custom-input" placeholder="Имя*" required type="text" name="input" v-model="form.name" />
-                        <input class="custom-input" placeholder="Email*" required type="email" name="input" v-model="form.email" />
-                        <input class="custom-input" placeholder="Телефон" required type="phone" name="input" v-model="form.phone" />
-                        <input class="custom-input" placeholder="Доп.информация" required type="text" name="input" v-model="form.comment" />
+                        <input class="custom-input" :placeholder="t(site.footer.namePh)" required type="text" name="input" v-model="form.name" />
+                        <input class="custom-input" :placeholder="t(site.footer.emailPh)" required type="email" name="input" v-model="form.email" />
+                        <input class="custom-input" :placeholder="t(site.footer.phonePh)" required type="phone" name="input" v-model="form.phone" />
+                        <input class="custom-input" :placeholder="t(site.footer.commentPh)" required type="text" name="input" v-model="form.comment" />
                     </div>
 
 <!--                    <div>-->
 <!--                        <input class="custom-input" type="checkbox" id="checkbox" placeholder="Доп.информация" required name="input" v-model="form.comment" />-->
 <!--                        <label for="checkbox">Я даю согласие на обработку персональных данных</label>-->
 <!--                    </div>-->
-                    <FillBtn class="main-footer-btn-submit" @click="onSubmit">ОТПРАВИТЬ</FillBtn>
+                    <FillBtn class="main-footer-btn-submit" @click="onSubmit">{{ t(site.footer.submit) }}</FillBtn>
                 </form>
 
             </div>
@@ -50,11 +50,15 @@ import PereDesign from '../icons/PereDesign.vue'
 import FillBtn from '../../components/ui/FillBtn.vue'
 
 import { ref, reactive } from 'vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site } from '@/locales/site'
 
 export default {
     components: { PereDesign },
 
     setup() {
+        const { t } = useSiteLocale()
+
         const form = reactive({
             name: '',
             email: '',
@@ -65,10 +69,11 @@ export default {
         const CHAT_ID = 349087015;
 
         const onSubmit = async () => {
-
-            // const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN1}/getUpdates`);
-            // const data = await response.json();
-            // console.log(444, data);
+            const text = t(site.footer.telegramBody)
+                .replaceAll('{name}', form.name)
+                .replaceAll('{phone}', form.phone)
+                .replaceAll('{email}', form.email)
+                .replaceAll('{comment}', form.comment)
 
             try {
                 await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -76,12 +81,12 @@ export default {
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         chat_id: CHAT_ID,
-                        text: `Привет меня зовут ${form.name}, моя контактная информация; Телефон: ${form.phone}, Почта: ${form.email}, Доп.инфа: ${form.comment},`
+                        text,
                     })
                 })
-                alert('Сообщение отправлено!')
+                alert(t(site.footer.alertOk))
             } catch (error) {
-                alert('Ошибка отправки')
+                alert(t(site.footer.alertErr))
             }
         }
 
@@ -89,6 +94,8 @@ export default {
         return {
             form,
             onSubmit,
+            t,
+            site,
         };
     }
 };

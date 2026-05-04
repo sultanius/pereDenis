@@ -11,23 +11,23 @@
         </div>
         <div class="info-row-block">
             <div class="info-row-item">
-                <p class="bold-p">Год</p>
-                <p>{{currentProjects.year}}</p>
+                <p class="bold-p">{{ t(site.projectMeta.year) }}</p>
+                <p>{{ currentProjects?.year }}</p>
             </div>
 
             <div class="info-row-item">
-                <p class="bold-p">Стадия</p>
-                <p>{{currentProjects.stageProcess}}</p>
+                <p class="bold-p">{{ t(site.projectMeta.stage) }}</p>
+                <p>{{ currentProjects ? t(site.stages[currentProjects.stageKey]) : '' }}</p>
             </div>
 
             <div class="info-row-item">
-                <p class="bold-p">Площадь</p>
-                <p>{{currentProjects.square}}</p>
+                <p class="bold-p">{{ t(site.projectMeta.area) }}</p>
+                <p>{{ currentProjects ? localizeSquare(currentProjects.square, locale) : '' }}</p>
             </div>
 
             <div class="info-row-item">
-                <p class="bold-p">Автор</p>
-                <p>Денис Перевозников</p>
+                <p class="bold-p">{{ t(site.projectMeta.author) }}</p>
+                <p>{{ t(site.projectMeta.authorName) }}</p>
             </div>
         </div>
 
@@ -55,6 +55,10 @@ import ProjectHeader from './ProjectHeader.vue'
 import MainFooter from '../mainPage/MainFooter.vue'
 import { projectPreviews } from '../../constants/index.js'
 import { computed } from 'vue'
+import { useSiteLocale } from '@/composables/useSiteLocale'
+import { site, localizeSquare } from '@/locales/site'
+
+const { t, locale } = useSiteLocale()
 
 const route = useRoute();
 
